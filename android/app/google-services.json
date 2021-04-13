@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698802081039",
+    "project_id": "book-sharing-management-app",
+    "storage_bucket": "book-sharing-management-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698802081039:android:b7530524f5bb16827e027a",
+        "android_client_info": {
+          "package_name": "com.example.book_sharing_management_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698802081039-6mohi1kdgvs2j1e14mtg7skdjeusahg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp0mzmy77hGXLeJOaA40HRst1z5MGOMBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698802081039-6mohi1kdgvs2j1e14mtg7skdjeusahg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
