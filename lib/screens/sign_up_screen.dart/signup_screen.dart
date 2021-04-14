@@ -158,7 +158,7 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                             email: email,
                                             password: password.text);
                                     if (newUser != null) {
-                                      _firestore
+                                      FirebaseFirestore.instance
                                           .collection('UserDetails')
                                           .doc(email)
                                           .set({
