@@ -1,4 +1,4 @@
-import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
+import 'package:book_sharing_management_application/screens/splash/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreenBody(),
+      home: SplashScreen(),
     );
   }
 }

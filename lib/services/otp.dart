@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
 import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,9 +7,9 @@ import 'package:pinput/pin_put/pin_put.dart';
 
 
 class OTPScreen extends StatefulWidget {
-  final String phone;
+  final String contactNumber;
 
-  const OTPScreen({Key key, this.phone}) : super(key: key);
+  const OTPScreen({Key key, this.contactNumber}) : super(key: key);
 
   @override
   _OTPScreenState createState() => _OTPScreenState();
@@ -52,7 +53,7 @@ class _OTPScreenState extends State<OTPScreen> {
                       margin: EdgeInsets.only(top: 40),
                       child: Center(
                         child: Text(
-                          'Verify +91-${widget.phone}',
+                          'Verify +91-${widget.contactNumber}',
                           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
                         ),
                       ),
@@ -79,7 +80,7 @@ class _OTPScreenState extends State<OTPScreen> {
                               if (value.user != null) {
                                 Navigator.pushAndRemoveUntil(
                                     context,
-                                    MaterialPageRoute(builder: (context) => LoginScreenBody()),
+                                    MaterialPageRoute(builder: (context) => HomeScreen()),
                                         (route) => false);
                               }
                             });
@@ -104,7 +105,7 @@ class _OTPScreenState extends State<OTPScreen> {
 
   _verifyPhone() async {
     await FirebaseAuth.instance.verifyPhoneNumber(
-        phoneNumber: '+91${widget.phone}',
+        phoneNumber: '+91${widget.contactNumber}',
         verificationCompleted: (PhoneAuthCredential credential) async {
           await FirebaseAuth.instance
               .signInWithCredential(credential)

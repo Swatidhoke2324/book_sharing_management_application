@@ -230,7 +230,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                                 width: 50,
                                 child: Image.asset("assets/images/google.png"),)),
                               SocialMediaRadioButton(smrbChild: Container(
-                                width: 70,
+                                width: 50,
                                 child: Image.asset("assets/images/facebook_logo.png"),)),
                             ],
                           ),
