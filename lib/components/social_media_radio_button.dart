@@ -9,7 +9,7 @@ class SocialMediaRadioButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return NeumorphicRadio(
-      padding: EdgeInsets.all(width * 0.015),
+      padding: EdgeInsets.all(width * 0.00),
       child: smrbChild,
       style: NeumorphicRadioStyle(
         boxShape: NeumorphicBoxShape.circle(),

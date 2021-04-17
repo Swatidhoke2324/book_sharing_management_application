@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
@@ -10,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
 
 class LoginScreenBody extends StatefulWidget {
   static const String id = 'login_screen_body';
@@ -224,9 +222,16 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              SocialMediaRadioButton(smrbChild: Text("252")),
-                              SocialMediaRadioButton(smrbChild: Text("252")),
-                              SocialMediaRadioButton(smrbChild: Text("252")),
+                              SocialMediaRadioButton(smrbChild: Container(
+                                width:50,
+                                child: Image.asset("assets/images/phone.png"),)
+                              ),
+                              SocialMediaRadioButton(smrbChild: Container(
+                                width: 50,
+                                child: Image.asset("assets/images/google.png"),)),
+                              SocialMediaRadioButton(smrbChild: Container(
+                                width: 70,
+                                child: Image.asset("assets/images/facebook_logo.png"),)),
                             ],
                           ),
                         ],
