@@ -1,12 +1,11 @@
 import 'package:book_sharing_management_application/constants.dart';
+import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:book_sharing_management_application/size_config.dart';
 import 'package:flutter/material.dart';
 
-
 // This is the best practice
 import '../components/splash_content.dart';
-
 
 class Body extends StatefulWidget {
   @override
@@ -21,8 +20,7 @@ class _BodyState extends State<Body> {
       "image": "assets/images/splash_1.png"
     },
     {
-      "text":
-          "We help people connect with book sharers \naround India",
+      "text": "We help people connect with book sharers \naround India",
       "image": "assets/images/splash_2.png"
     },
     {
@@ -75,7 +73,7 @@ class _BodyState extends State<Body> {
                           context,
                           MaterialPageRoute(
                             builder: (context) {
-                              return LoginScreenBody();
+                              return HomeScreen();
                             },
                           ),
                         );
