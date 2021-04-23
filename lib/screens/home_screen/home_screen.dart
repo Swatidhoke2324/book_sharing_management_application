@@ -1,4 +1,8 @@
 import 'package:book_sharing_management_application/screens/explore/explore.dart';
+import 'package:book_sharing_management_application/screens/more/more.dart';
+import 'package:book_sharing_management_application/screens/request/request.dart';
+import 'package:book_sharing_management_application/screens/upload/upload.dart';
+import 'package:book_sharing_management_application/screens/wishlist/wishlist.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -39,67 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Column(
-      children: <Widget>[
-        SizedBox(
-          height: 200,
-        ),
-        Icon(
-          Icons.add_photo_alternate,
-          size: 60,
-        ),
-        Text(
-          'Upload',
-          style: optionStyle,
-        ),
-      ],
-    ),
-    Column(
-      children: <Widget>[
-        SizedBox(
-          height: 200,
-        ),
-        Icon(
-          Icons.question_answer_outlined,
-          size: 60,
-        ),
-        Text(
-          'Request',
-          style: optionStyle,
-        ),
-      ],
-    ),
+    Upload(),
+    Request(),
     Explore(),
-    Column(
-      children: <Widget>[
-        SizedBox(
-          height: 200,
-        ),
-        Icon(
-          CupertinoIcons.heart_circle_fill,
-          size: 60,
-        ),
-        Text(
-          'Wishlist',
-          style: optionStyle,
-        ),
-      ],
-    ),
-    Column(
-      children: <Widget>[
-        SizedBox(
-          height: 200,
-        ),
-        Icon(
-          CupertinoIcons.line_horizontal_3_decrease_circle_fill,
-          size: 60,
-        ),
-        Text(
-          'More',
-          style: optionStyle,
-        ),
-      ],
-    ),
+    Wishlist(),
+    More(),
   ];
 
   void _onItemTapped(int index) {
