@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/screens/explore/explore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     Column(
       children: <Widget>[
@@ -68,21 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
     ),
-    Column(
-      children: <Widget>[
-        SizedBox(
-          height: 200,
-        ),
-        Icon(
-          CupertinoIcons.eyeglasses,
-          size: 60,
-        ),
-        Text(
-          'Explore',
-          style: optionStyle,
-        ),
-      ],
-    ),
+    Explore(),
     Column(
       children: <Widget>[
         SizedBox(
@@ -125,16 +112,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: Text(
-            "Book Sharing App",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
         body: Center(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
@@ -174,4 +151,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
