@@ -1,46 +1,100 @@
+import 'package:book_sharing_management_application/screens/upload/upload_cards.dart';
+import 'package:book_sharing_management_application/screens/upload/upload_for_donation.dart';
+import 'package:book_sharing_management_application/screens/upload/upload_for_lending.dart';
+import 'package:book_sharing_management_application/screens/upload/upload_for_selling.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class Upload extends StatefulWidget {
-  @override
-  _Upload createState() => _Upload();
-}
-
-class _Upload extends State<Upload> {
+class Upload extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const TextStyle optionStyle =
-        TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: Text(
-            "Upload",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: 250.0,
+            floating: false,
+            // pinned: true,
+            // snap: true,
+            stretch: true,
+            backgroundColor: Colors.deepPurple,
+            flexibleSpace: FlexibleSpaceBar(
+              centerTitle: true,
+              title: Align(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  'Welcome to BOOKITO',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              background: Image.asset(
+                "assets/images/signup.png",
+                fit: BoxFit.values[1],
+              ),
             ),
           ),
-        ),
-        backgroundColor: Color(0xFFECF0F3),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(
-                height: 200,
-              ),
-              Icon(
-                Icons.add_photo_alternate,
-                size: 60,
-              ),
-              Text(
-                'Upload',
-                style: optionStyle,
-              ),
-            ],
+          SliverGrid(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+            ),
+            delegate: SliverChildListDelegate(
+              [
+                UploadCards(
+                  cardText: 'Upload Book for Selling',
+                  imagePath: 'assets/images/signup.png',
+                  imageWidth: 80.0,
+                  imageHeight: 80.0,
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            UploadForSelling(), // SearchTraintfs(),
+                      ),
+                    );
+                  },
+                ),
+                UploadCards(
+                  cardText: 'Upload Book for Lending',
+                  imagePath: 'assets/images/signup.png',
+                  imageWidth: 80.0,
+                  imageHeight: 80.0,
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UploadForLending(),
+                      ),
+                    );
+                  },
+                ),
+                UploadCards(
+                  cardText: 'Upload Book for Donation',
+                  imagePath: 'assets/images/signup.png',
+                  imageWidth: 80.0,
+                  imageHeight: 80.0,
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UploadForDonation(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
-        ),
+          // SliverList(
+          //   delegate: SliverChildListDelegate(
+          //     [Text('Hi')],
+          //   ),
+          // ),
+        ],
       ),
     );
   }

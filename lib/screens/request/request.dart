@@ -13,7 +13,7 @@ class _Request extends State<Request> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.deepPurple,
           title: Text(
             "Request",
             style: TextStyle(

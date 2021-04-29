@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-
 class CustomizedTextFormField extends StatefulWidget {
   final hintText;
   final onPress;
@@ -10,13 +9,14 @@ class CustomizedTextFormField extends StatefulWidget {
   final validator;
   final controller;
 
-  const CustomizedTextFormField(
-      {this.hintText,
-      this.onPress,
-      this.hideText,
-      this.inputType,
-      this.validator,
-      this.controller});
+  const CustomizedTextFormField({
+    this.hintText,
+    this.onPress,
+    this.hideText,
+    this.inputType,
+    this.validator,
+    this.controller,
+  });
 
   @override
   _CustomizedTextFormFieldState createState() =>

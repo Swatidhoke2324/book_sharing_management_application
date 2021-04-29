@@ -1,11 +1,9 @@
-
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
 import 'package:book_sharing_management_application/components/customized_text_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
 
 class ForgotPassword extends StatefulWidget {
   @override
@@ -42,7 +40,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           fit: BoxFit.contain,
                         ),
                         CustomizedTextWidget(
-                          text: "Reset Password",
+                          text: "Forgot Password",
                           textColor: Color(0xFF223D6B),
                           textFont: "Product Sans",
                           textFontSize: 0.07,

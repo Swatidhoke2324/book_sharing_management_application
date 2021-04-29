@@ -14,7 +14,7 @@ class _More extends State<More> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.deepPurple,
           title: Text(
             "More",
             style: TextStyle(

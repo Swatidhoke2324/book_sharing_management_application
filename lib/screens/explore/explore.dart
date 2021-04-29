@@ -11,524 +11,1622 @@ class Explore extends StatefulWidget {
 class _Explore extends State<Explore> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
-          title: Text(
-            "Explore",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
+    return DefaultTabController(
+      length: 3,
+      child: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.deepPurple,
+            title: Text(
+              "Explore for Books",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            actions: [
+              IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: () {
+                    showSearch(context: context, delegate: DataSearch());
+                  })
+            ],
+            bottom: TabBar(
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicator: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Colors.deepPurple[100], Colors.deepPurple],
+                ),
+                borderRadius: BorderRadius.circular(50.0),
+                color: Colors.white,
+              ),
+              indicatorColor: Colors.black,
+              tabs: <Widget>[
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Buy',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Borrow',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Donate',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ),
-        backgroundColor: Color(0xFFECF0F3),
-        body: SingleChildScrollView(
-          child: Column(
+          backgroundColor: Color(0xFFECF0F3),
+          body: TabBarView(
             children: [
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                  ],
                 ),
               ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
                     ),
-                  ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 190.0,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          Container(
+                            child: CustomizedGridTile(
+                              onPress: null,
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              onPress: null,
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: CustomizedGridTile(
+                              Image: Image.network(
+                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
                     ),
-                  ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                onPress: null,
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                Image: Image.network(
+                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                  ],
                 ),
               ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
-                    "Category of Books",
-                    style: TextStyle(
-                      color: Color(0xFF223D6B),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                  height: 190.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          onPress: null,
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                      Container(
-                        child: CustomizedGridTile(
-                          Image: Image.network(
-                            "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+class DataSearch extends SearchDelegate {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [IconButton(icon: Icon(Icons.clear), onPressed: () {})];
+    //actions for app bar
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+        icon: AnimatedIcon(
+          icon: AnimatedIcons.menu_arrow,
+          progress: transitionAnimation,
+        ),
+        onPressed: () {});
+    //leading icon on the left of the app bar
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    //show some result based on the selection
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    //show when someone searches for something
   }
 }
 

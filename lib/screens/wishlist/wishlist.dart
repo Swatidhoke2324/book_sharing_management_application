@@ -14,7 +14,7 @@ class _Wishlist extends State<Wishlist> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Colors.deepPurple,
           title: Text(
             "Wishlist",
             style: TextStyle(
