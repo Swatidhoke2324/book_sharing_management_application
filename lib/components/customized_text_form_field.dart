@@ -32,10 +32,18 @@ class _CustomizedTextFormFieldState extends State<CustomizedTextFormField> {
     return Neumorphic(
       margin: EdgeInsets.only(top: height * 0.02),
       style: NeumorphicStyle(
-        depth: -20,
-        surfaceIntensity: 0.5,
         shape: NeumorphicShape.concave,
         boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(31)),
+        lightSource: LightSource.topLeft,
+        depth: -20,
+        intensity: 0.8,
+        surfaceIntensity: 0.3,
+        shadowDarkColorEmboss: Color(0xFF97A7C3),
+        shadowLightColorEmboss: Color(0xFFffffff),
+        border: NeumorphicBorder(
+          color: Color(0xFF97A7C3),
+          width: 0.3,
+        ),
       ),
       child: Material(
         child: Padding(

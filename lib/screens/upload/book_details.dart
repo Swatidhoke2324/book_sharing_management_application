@@ -1,26 +1,26 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
-import 'package:book_sharing_management_application/screens/explore/explore.dart';
-import 'package:flutter/material.dart';
+import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
+import 'package:book_sharing_management_application/screens/upload/purpose_of_upload.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-class Wishlist extends StatefulWidget {
+class BookDetails extends StatefulWidget {
   @override
-  _Wishlist createState() => _Wishlist();
+  _BookDetails createState() => _BookDetails();
 }
 
-class _Wishlist extends State<Wishlist> {
+class _BookDetails extends State<BookDetails> {
   @override
   Widget build(BuildContext context) {
-    const TextStyle optionStyle = TextStyle(
-      fontSize: 18,
-      color: Color(0xFF193566),
-    );
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF193566),
+          backgroundColor: Color(0xFF223D6B),
           title: Text(
-            "Wishlist",
+            "Book Details",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
@@ -35,23 +35,26 @@ class _Wishlist extends State<Wishlist> {
                 height: 200,
               ),
               Icon(
-                CupertinoIcons.heart_circle_fill,
+                CupertinoIcons.book_circle_fill,
                 size: 60,
                 color: Color(0xFF193566),
               ),
               Text(
-                'No Books Wishlisted',
-                style: optionStyle,
+                'Book Details',
+                style: TextStyle(
+                  color: Color(0xFF193566),
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               CustomizedNeumorphicButton(
                 fontSize: 24.0,
-                buttonText: "Explore",
+                buttonText: "Next",
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return Explore();
+                        return PurposeOfUpload();
                       },
                     ),
                   );

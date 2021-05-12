@@ -6,7 +6,8 @@ class CustomizedNeumorphicButton extends StatelessWidget {
   final onPressed;
   final fontSize;
 
-  const CustomizedNeumorphicButton({this.buttonText, this.onPressed, this.fontSize});
+  const CustomizedNeumorphicButton(
+      {this.buttonText, this.onPressed, this.fontSize});
 
   @override
   Widget build(BuildContext context) {

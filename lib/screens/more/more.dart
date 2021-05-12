@@ -9,12 +9,15 @@ class More extends StatefulWidget {
 class _More extends State<More> {
   @override
   Widget build(BuildContext context) {
-    const TextStyle optionStyle =
-        TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+    const TextStyle optionStyle = TextStyle(
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
+      color: Color(0xFF193566),
+    );
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color(0xFF193566),
           title: Text(
             "More",
             style: TextStyle(
@@ -33,6 +36,7 @@ class _More extends State<More> {
               Icon(
                 CupertinoIcons.line_horizontal_3_decrease_circle_fill,
                 size: 60,
+                color: Color(0xFF193566),
               ),
               Text(
                 'More',

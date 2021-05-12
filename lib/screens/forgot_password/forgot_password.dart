@@ -34,11 +34,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     child: Column(
                       children: <Widget>[
                         SizedBox(height: height * 0.04),
-                        Image.network(
-                          "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_forgot-password.png",
-                          height: height * 0.3,
-                          fit: BoxFit.contain,
-                        ),
+                        Image.asset("assets/images/reset_password.png"),
                         CustomizedTextWidget(
                           text: "Forgot Password",
                           textColor: Color(0xFF223D6B),

@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.blueAccent,
+          selectedItemColor: Color(0xFF223D6B),
           showUnselectedLabels: true,
           unselectedItemColor: Colors.grey,
           onTap: _onItemTapped,

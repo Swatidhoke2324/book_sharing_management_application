@@ -16,7 +16,7 @@ class _Explore extends State<Explore> {
       child: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.deepPurple,
+            backgroundColor: Color(0xFF193566),
             title: Text(
               "Explore for Books",
               style: TextStyle(
@@ -37,7 +37,7 @@ class _Explore extends State<Explore> {
               indicatorSize: TabBarIndicatorSize.tab,
               indicator: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Colors.deepPurple[100], Colors.deepPurple],
+                  colors: [Color(0xFFC5D3EA), Color(0xFF193566)],
                 ),
                 borderRadius: BorderRadius.circular(50.0),
                 color: Colors.white,
@@ -107,52 +107,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -178,52 +164,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -249,52 +221,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -320,52 +278,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -391,52 +335,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -462,52 +392,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -533,52 +449,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -610,52 +512,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -681,52 +569,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -752,52 +626,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -823,52 +683,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -894,52 +740,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -965,52 +797,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1036,52 +854,38 @@ class _Explore extends State<Explore> {
                           Container(
                             child: CustomizedGridTile(
                               onPress: null,
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
                               onPress: null,
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.network(
-                                "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                              ),
+                              Image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                         ],
@@ -1114,52 +918,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1185,52 +975,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1256,52 +1032,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1327,52 +1089,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1398,52 +1146,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1469,52 +1203,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1540,52 +1260,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.network(
-                                  "https://dt2gwe7hif2g5.cloudfront.net/assets/BSC_login.png",
-                                ),
+                                Image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],

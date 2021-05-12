@@ -34,8 +34,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
   _showDialog(context) {
     return showDialog(
         context: context,
-        builder: (_) =>
-            AlertDialog(
+        builder: (_) => AlertDialog(
               title: Text('Error'),
               content: Text('Username or password wrong'),
               actions: <Widget>[
@@ -51,42 +50,36 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
 
   Future<bool> _onBackPressed() {
     return showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text('Exit'),
-          content: Text('Do you want to exit the App ?'),
-          actions: <Widget>[
-            TextButton(
-              child: Text('No'),
-              onPressed: () {
-                Navigator.of(context).pop(false); //Will not exit the App
-              },
-            ),
-            TextButton(
-              child: Text('Yes'),
-              onPressed: () {
-                exit(0);
-                //Will exit the App
-              },
-            )
-          ],
-        );
-      },
-    ) ??
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: Text('Exit'),
+              content: Text('Do you want to exit the App ?'),
+              actions: <Widget>[
+                TextButton(
+                  child: Text('No'),
+                  onPressed: () {
+                    Navigator.of(context).pop(false); //Will not exit the App
+                  },
+                ),
+                TextButton(
+                  child: Text('Yes'),
+                  onPressed: () {
+                    exit(0);
+                    //Will exit the App
+                  },
+                )
+              ],
+            );
+          },
+        ) ??
         false;
   }
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery
-        .of(context)
-        .size
-        .height;
-    final width = MediaQuery
-        .of(context)
-        .size
-        .width;
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return WillPopScope(
       onWillPop: _onBackPressed,
       child: Scaffold(
@@ -110,8 +103,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                             text: "Welcome to Book Sharing App!",
                             textColor: Color(0xFF223D6B),
                             textFont: "Product Sans",
-                            textFontSize: 0.06,
-                            textFontWeight: FontWeight.bold,
+                            textFontSize: 0.055,
                             textAlignment: Alignment.centerLeft,
                             ctwPaddingMultiple: 0,
                           ),
@@ -164,8 +156,8 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                               // });
                               try {
                                 final user =
-                                await _auth.signInWithEmailAndPassword(
-                                    email: email, password: password);
+                                    await _auth.signInWithEmailAndPassword(
+                                        email: email, password: password);
                                 if (user != null) {
                                   // Navigator.push(
                                   //   context,
@@ -222,16 +214,22 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              SocialMediaRadioButton(smrbChild: Container(
-                                width:50,
-                                child: Image.asset("assets/images/phone.png"),)
-                              ),
-                              SocialMediaRadioButton(smrbChild: Container(
+                              SocialMediaRadioButton(
+                                  smrbChild: Container(
                                 width: 50,
-                                child: Image.asset("assets/images/google.png"),)),
-                              SocialMediaRadioButton(smrbChild: Container(
+                                child: Image.asset("assets/images/phone.png"),
+                              )),
+                              SocialMediaRadioButton(
+                                  smrbChild: Container(
                                 width: 50,
-                                child: Image.asset("assets/images/facebook_logo.png"),)),
+                                child: Image.asset("assets/images/google.png"),
+                              )),
+                              SocialMediaRadioButton(
+                                  smrbChild: Container(
+                                width: 50,
+                                child: Image.asset(
+                                    "assets/images/facebook_logo.png"),
+                              )),
                             ],
                           ),
                         ],
