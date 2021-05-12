@@ -18,35 +18,32 @@ class _PurposeOfUpload extends State<PurposeOfUpload> {
       child: Scaffold(
         backgroundColor: Color(0xFFECF0F3),
         body: Center(
-            child: Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 100.0, bottom: 22.0),
-              child: UploadCards(
-                onPress: null,
-                text: 'Upload Book for Selling',
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(top: 134.0, bottom: 22.0),
+                child: UploadCards(
+                  onPress: null,
+                  text: 'Upload Book for Selling',
+                ),
               ),
-            ),
-            Container(
-              padding: EdgeInsets.only(bottom: 20.0),
-              child: UploadCards(
-                onPress: null,
-                text: 'Upload Book for Lending',
+              Container(
+                padding: EdgeInsets.only(bottom: 20.0),
+                child: UploadCards(
+                  onPress: null,
+                  text: 'Upload Book for Lending',
+                ),
               ),
-            ),
-            Container(
-              padding: EdgeInsets.only(bottom: 20.0),
-              child: UploadCards(
-                onPress: null,
-                text: 'Upload Book for Donation',
+              Container(
+                padding: EdgeInsets.only(bottom: 20.0),
+                child: UploadCards(
+                  onPress: null,
+                  text: 'Upload Book for Donation',
+                ),
               ),
-            ),
-            CustomizedNeumorphicButton(
-              fontSize: 24.0,
-              buttonText: "Upload",
-            ),
-          ],
-        )),
+            ],
+          ),
+        ),
       ),
     );
   }

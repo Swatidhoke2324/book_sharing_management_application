@@ -107,38 +107,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -164,38 +164,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -221,38 +221,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -278,38 +278,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -335,38 +335,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -392,38 +392,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -449,38 +449,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -512,38 +512,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -569,38 +569,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -626,38 +626,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -683,38 +683,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -740,38 +740,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -797,38 +797,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -854,38 +854,38 @@ class _Explore extends State<Explore> {
                           Container(
                             child: CustomizedGridTile(
                               onPress: null,
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
                               onPress: null,
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                           Container(
                             child: CustomizedGridTile(
-                              Image: Image.asset("assets/images/login.png"),
+                              image: Image.asset("assets/images/login.png"),
                             ),
                           ),
                         ],
@@ -918,38 +918,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -975,38 +975,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1032,38 +1032,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1089,38 +1089,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1146,38 +1146,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1203,38 +1203,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
@@ -1260,38 +1260,38 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: Image.asset("assets/images/login.png"),
                               ),
                             ),
                           ],
