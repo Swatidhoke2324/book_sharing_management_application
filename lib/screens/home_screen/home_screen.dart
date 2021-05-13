@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/books/home/components/body.dart';
 import 'package:book_sharing_management_application/screens/explore/explore.dart';
 import 'package:book_sharing_management_application/screens/more/more.dart';
 import 'package:book_sharing_management_application/screens/request/request.dart';
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     Upload(),
     Request(),
-    Explore(),
+    exploreBody(),
     Wishlist(),
     More(),
   ];
@@ -84,9 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               label: 'More',
-              icon: Icon(
-                CupertinoIcons.line_horizontal_3_decrease_circle_fill,
-              ),
+              icon: Icon(CupertinoIcons.line_horizontal_3_decrease_circle_fill),
             ),
           ],
           currentIndex: _selectedIndex,

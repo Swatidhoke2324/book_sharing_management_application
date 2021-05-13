@@ -1,3 +1,5 @@
+import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
+import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -50,13 +52,27 @@ class _More extends State<More> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
-                            child: const Text('SignUp'),
-                            onPressed: () {/* ... */},
+                            child: const Text('Login'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LoginScreenBody(),
+                                ),
+                              );
+                            },
                           ),
                           const SizedBox(width: 8),
                           TextButton(
-                            child: const Text('Login'),
-                            onPressed: () {/* ... */},
+                            child: const Text('SignUp'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignUpScreenBody(),
+                                ),
+                              );
+                            },
                           ),
                           const SizedBox(width: 8),
                         ],

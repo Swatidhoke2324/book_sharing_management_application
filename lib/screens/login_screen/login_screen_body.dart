@@ -81,7 +81,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return WillPopScope(
-      onWillPop: _onBackPressed,
+      // onWillPop: _onBackPressed,
       child: Scaffold(
         body: ModalProgressHUD(
           inAsyncCall: showSpinner,

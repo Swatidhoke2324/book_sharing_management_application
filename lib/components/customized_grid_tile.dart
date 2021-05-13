@@ -4,11 +4,11 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 class CustomizedGridTile extends StatefulWidget {
   final givenheight;
   final onPress;
-  final image;
+  final Image;
   const CustomizedGridTile({
     this.givenheight,
     this.onPress,
-    this.image,
+    this.Image,
   });
 
   @override
@@ -42,7 +42,7 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
                   onTap: () {},
                   child: Container(
                     height: widget.givenheight,
-                    child: widget.image,
+                    child: widget.Image,
                   ),
                 ),
               ),
