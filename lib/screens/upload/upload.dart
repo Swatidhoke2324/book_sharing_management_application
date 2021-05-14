@@ -23,7 +23,7 @@ class _Upload extends State<Upload> {
   String bookName;
   String bookAuthor;
   String bookEdition;
-  String ISBN;
+  String bookISBN;
   Future uploadFile(File img) async {
     Reference ref = FirebaseStorage.instance
         .ref()
@@ -126,7 +126,7 @@ class _Upload extends State<Upload> {
                                 hintText: "ISBN Number",
                                 hideText: false,
                                 onPress: (value) {
-                                  ISBN = value;
+                                  bookISBN = value;
                                 },
                                 validator: (String value) {
                                   if (value.isEmpty) {
@@ -152,7 +152,7 @@ class _Upload extends State<Upload> {
                                             "BookName": bookName,
                                             "BookAuthor": bookAuthor,
                                             "BookEdition":bookEdition,
-                                            "ISBN":ISBN,
+                                            "BookISBN":bookISBN,
                                           }
                                         },
                                       });
@@ -166,7 +166,13 @@ class _Upload extends State<Upload> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) {
-                                            return BookDetails(uploadedBookNo:uploadedBookNo);
+                                            return BookDetails(
+                                              uploadedBookNo:uploadedBookNo,
+                                              bookName: bookName,
+                                              bookAuthor: bookAuthor,
+                                              bookEdition: bookEdition,
+                                              bookISBN: bookISBN,
+                                            );
                                           },
                                         ),
                                       );

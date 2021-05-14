@@ -8,15 +8,25 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class PurposeOfUpload extends StatefulWidget {
   final uploadedBookNo;
+  final bookName;
+  final bookAuthor;
+  final bookEdition;
+  final bookISBN;
+  final frontViewUrl;
+  final backViewUrl;
+  final threeDViewUrl;
 
-  const PurposeOfUpload({Key key, this.uploadedBookNo}) : super(key: key);
+  const PurposeOfUpload({Key key, this.uploadedBookNo, this.bookName, this.bookAuthor, this.bookEdition, this.bookISBN, this.frontViewUrl, this.backViewUrl, this.threeDViewUrl}) : super(key: key);
   @override
   _PurposeOfUpload createState() => _PurposeOfUpload();
 }
 
 class _PurposeOfUpload extends State<PurposeOfUpload> {
   final _firestore = FirebaseFirestore.instance;
-  bool value = false;
+  bool sell = false;
+  bool lend = false;
+  bool donate = false;
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -48,10 +58,10 @@ class _PurposeOfUpload extends State<PurposeOfUpload> {
                   SizedBox(width: 10), //SizedBox
                   /** Checkbox Widget **/
                   Checkbox(
-                    value: this.value,
+                    value: this.sell,
                     onChanged: (bool value) {
                       setState(() {
-                        this.value = value;
+                        this.sell = value;
                       });
                     },
                   ), //Checkbox
@@ -67,12 +77,11 @@ class _PurposeOfUpload extends State<PurposeOfUpload> {
                     style: TextStyle(fontSize: 17.0),
                   ), //Text
                   SizedBox(width: 10), //SizedBox
-                  /** Checkbox Widget **/
                   Checkbox(
-                    value: this.value,
+                    value: this.lend,
                     onChanged: (bool value) {
                       setState(() {
-                        this.value = value;
+                        this.lend = value;
                       });
                     },
                   ), //Checkbox
@@ -88,45 +97,56 @@ class _PurposeOfUpload extends State<PurposeOfUpload> {
                     style: TextStyle(fontSize: 17.0),
                   ), //Text
                   SizedBox(width: 10), //SizedBox
-                  /** Checkbox Widget **/
                   Checkbox(
-                    value: this.value,
+                    value: this.donate,
                     onChanged: (bool value) {
                       setState(() {
-                        this.value = value;
+                        this.donate = value;
                       });
                     },
-                  ), //Checkbo
+                  ),
                   SizedBox(
                     height: height*0.1,
                   ),// x
-                  CustomizedNeumorphicButton(
-                      fontSize: 24.0,
-                      buttonText: "Next",
-                      onPressed: () {
-                          _firestore
-                              .collection('BookUploadedDetails')
-                              .doc(loggedInEmail)
-                              .update({
-                            "BookDetails":{
-                              "Book$uploadedBookNo":{
-                                "ForSell": true,
-                                "ForLending": true,
-                                "ForDonation":true,
-                              }
-                            },
-                          });
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return ShowBookDetail();
-                              },
-                            ),
-                          );
-                      }),
                 ], //<Widget>[]
               ), //
+              CustomizedNeumorphicButton(
+                  fontSize: 24.0,
+                  buttonText: "Next",
+                  onPressed: () {
+                    _firestore
+                        .collection('BookUploadedDetails')
+                        .doc(loggedInEmail)
+                        .update({
+                      "BookDetails":{
+                        "Book$uploadedBookNo":{
+                          "ForSell": {sell},
+                          // "ForLending": lend,
+                          // "ForDonation":donate,
+                        }
+                      },
+                    });
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ShowBookDetail(
+                            uploadedBookNo:widget.uploadedBookNo,
+                            bookName: widget.bookName,
+                            bookAuthor: widget.bookAuthor,
+                            bookEdition: widget.bookEdition,
+                            bookISBN: widget.bookISBN,
+                            frontViewUrl: widget.frontViewUrl,
+                            backViewUrl: widget.backViewUrl,
+                            threeDViewUrl: widget.threeDViewUrl,
+                            sell: sell,
+                            donate: donate,
+                            lend: lend,
+                          );
+                        },
+                      ),
+                    );
+                  }),
             ],
           ),
         ),

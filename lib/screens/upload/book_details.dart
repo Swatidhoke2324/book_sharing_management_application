@@ -12,8 +12,12 @@ import 'dart:io';
 
 class BookDetails extends StatefulWidget {
   final uploadedBookNo;
+  final bookName;
+  final bookAuthor;
+  final bookEdition;
+  final bookISBN;
 
-  const BookDetails({Key key, this.uploadedBookNo}) : super(key: key);
+  const BookDetails({Key key, this.uploadedBookNo, this.bookName, this.bookAuthor, this.bookEdition, this.bookISBN}) : super(key: key);
   @override
   _BookDetails createState() => _BookDetails();
 }
@@ -96,7 +100,7 @@ class _BookDetails extends State<BookDetails> {
               .doc(loggedInEmail)
               .update({
             "BookDetails":{
-              "Book$widget.uploadedBookNo":{
+              "Book${widget.uploadedBookNo}":{
                 'FrontView': fileUrl,
               }
             },
@@ -118,7 +122,7 @@ class _BookDetails extends State<BookDetails> {
                 .doc(loggedInEmail)
                 .update({
               "BookDetails":{
-                "Book$widget.uploadedBookNo":{
+                "Book${widget.uploadedBookNo}":{
                   'BackView': fileUrl,
                 }
               },
@@ -140,7 +144,7 @@ class _BookDetails extends State<BookDetails> {
                 .doc(loggedInEmail)
                 .update({
               "BookDetails":{
-                "Book$widget.uploadedBookNo":{
+                "Book${widget.uploadedBookNo}":{
                   '3DView': fileUrl,
                 }
               },
@@ -275,7 +279,16 @@ class _BookDetails extends State<BookDetails> {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return PurposeOfUpload(uploadedBookNo:widget.uploadedBookNo);
+                        return PurposeOfUpload(
+                          uploadedBookNo:widget.uploadedBookNo,
+                          bookName: widget.bookName,
+                          bookAuthor: widget.bookAuthor,
+                          bookEdition: widget.bookEdition,
+                          bookISBN: widget.bookISBN,
+                          frontViewUrl: frontViewUrl,
+                          backViewUrl: backViewUrl,
+                          threeDViewUrl: threeDViewUrl,
+                        );
                       },
                     ),
                   );
