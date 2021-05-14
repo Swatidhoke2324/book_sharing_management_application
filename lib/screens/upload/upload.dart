@@ -1,9 +1,14 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
+import 'package:book_sharing_management_application/data.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
-
+import 'dart:io';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'book_details.dart';
 
 class Upload extends StatefulWidget {
@@ -13,10 +18,31 @@ class Upload extends StatefulWidget {
 
 class _Upload extends State<Upload> {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  final _firestore = FirebaseFirestore.instance;
   bool showSpinner = false;
   String bookName;
   String bookAuthor;
   String bookEdition;
+  String ISBN;
+  Future uploadFile(File img) async {
+    Reference ref = FirebaseStorage.instance
+        .ref()
+        .child('$loggedInEmail/BookImages/Book$uploadedBookNo/Img');
+    await ref.putFile(img).whenComplete(() {
+      ref.getDownloadURL().then((fileUrl) {
+        print(fileUrl);
+        setState(() {
+          FirebaseFirestore.instance
+              .collection('UserDetails')
+              .doc(loggedInEmail)
+              .update({
+            'BookImageUrls': fileUrl,
+          });
+          // uploadFileUrl = fileUrl;
+        });
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +126,7 @@ class _Upload extends State<Upload> {
                                 hintText: "ISBN Number",
                                 hideText: false,
                                 onPress: (value) {
-                                  bookEdition = value;
+                                  ISBN = value;
                                 },
                                 validator: (String value) {
                                   if (value.isEmpty) {
@@ -110,19 +136,42 @@ class _Upload extends State<Upload> {
                                 },
                               ),
                               CustomizedNeumorphicButton(
-                                fontSize: 24.0,
-                                buttonText: "Next",
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) {
-                                        return BookDetails();
-                                      },
-                                    ),
-                                  );
-                                },
-                              ),
+                                  fontSize: 24.0,
+                                  buttonText: "Next",
+                                  onPressed: () {
+                                    if (_formkey.currentState.validate()) {
+                                      setState(() {
+                                        uploadedBookNo=uploadedBookNo+1;
+                                      });
+                                      _firestore
+                                          .collection('BookUploadedDetails')
+                                      .doc(loggedInEmail)
+                                          .update({
+                                        "BookDetails":{
+                                          "Book$uploadedBookNo":{
+                                            "BookName": bookName,
+                                            "BookAuthor": bookAuthor,
+                                            "BookEdition":bookEdition,
+                                            "ISBN":ISBN,
+                                          }
+                                        },
+                                      });
+                                      _firestore
+                                          .collection('UserDetails')
+                                          .doc(loggedInEmail)
+                                          .update({
+                                        "uploadedBookNo":uploadedBookNo,
+                                      });
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return BookDetails(uploadedBookNo:uploadedBookNo);
+                                          },
+                                        ),
+                                      );
+                                    }
+                                  }),
                             ],
                           ),
                         ),

@@ -165,6 +165,7 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                         'UserName': fullName,
                                         'E-Mail': email,
                                         'PhoneNo.': contactNumber,
+                                        "uploadedBookNo":0,
                                       });
                                       Navigator.push(
                                         context,

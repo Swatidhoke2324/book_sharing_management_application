@@ -1,8 +1,12 @@
+
+import 'package:book_sharing_management_application/data.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'package:image_picker/image_picker.dart';
 import 'more_cards.dart';
 
 class More extends StatefulWidget {
@@ -11,6 +15,7 @@ class More extends StatefulWidget {
 }
 
 class _More extends State<More> {
+
   @override
   Widget build(BuildContext context) {
     const TextStyle optionStyle = TextStyle(
@@ -52,24 +57,28 @@ class _More extends State<More> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           TextButton(
-                            child: const Text('Login'),
+                            child: const Text('SignUp'),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginScreenBody(),
+                                  builder: (context) {
+                                    return SignUpScreenBody();
+                                  },
                                 ),
                               );
                             },
                           ),
                           const SizedBox(width: 8),
                           TextButton(
-                            child: const Text('SignUp'),
+                            child: const Text('Login'),
                             onPressed: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => SignUpScreenBody(),
+                                  builder: (context) {
+                                    return LoginScreenBody();
+                                  },
                                 ),
                               );
                             },

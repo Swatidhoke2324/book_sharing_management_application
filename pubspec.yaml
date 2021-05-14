@@ -28,15 +28,13 @@ dependencies:
   cloud_firestore:
   modal_progress_hud:
   pinput:
+  image_picker:
+  firebase_storage:
   flutter:
     sdk: flutter
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  carousel_slider: ^2.3.1
-  flutter_svg: ^0.22.0
+  cupertino_icons:
+  carousel_slider:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
