@@ -114,18 +114,6 @@ class _PurposeOfUpload extends State<PurposeOfUpload> {
                   fontSize: 24.0,
                   buttonText: "Next",
                   onPressed: () {
-                    _firestore
-                        .collection('BookUploadedDetails')
-                        .doc(loggedInEmail)
-                        .update({
-                      "BookDetails":{
-                        "Book$uploadedBookNo":{
-                          "ForSell": {sell},
-                          // "ForLending": lend,
-                          // "ForDonation":donate,
-                        }
-                      },
-                    });
                     Navigator.push(
                       context,
                       MaterialPageRoute(

@@ -140,28 +140,6 @@ class _Upload extends State<Upload> {
                                   buttonText: "Next",
                                   onPressed: () {
                                     if (_formkey.currentState.validate()) {
-                                      setState(() {
-                                        uploadedBookNo=uploadedBookNo+1;
-                                      });
-                                      _firestore
-                                          .collection('BookUploadedDetails')
-                                      .doc(loggedInEmail)
-                                          .update({
-                                        "BookDetails":{
-                                          "Book$uploadedBookNo":{
-                                            "BookName": bookName,
-                                            "BookAuthor": bookAuthor,
-                                            "BookEdition":bookEdition,
-                                            "BookISBN":bookISBN,
-                                          }
-                                        },
-                                      });
-                                      _firestore
-                                          .collection('UserDetails')
-                                          .doc(loggedInEmail)
-                                          .update({
-                                        "uploadedBookNo":uploadedBookNo,
-                                      });
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(

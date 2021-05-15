@@ -96,15 +96,6 @@ class _BookDetails extends State<BookDetails> {
       ref.getDownloadURL().then((fileUrl) {
         print(fileUrl);
         setState(() {
-          FirebaseFirestore.instance.collection('BookUploadedDetails')
-              .doc(loggedInEmail)
-              .update({
-            "BookDetails":{
-              "Book${widget.uploadedBookNo}":{
-                'FrontView': fileUrl,
-              }
-            },
-          });
            frontViewUrl= fileUrl;
         });
       });
@@ -118,15 +109,6 @@ class _BookDetails extends State<BookDetails> {
         ref.getDownloadURL().then((fileUrl) {
           print(fileUrl);
           setState(() {
-            FirebaseFirestore.instance.collection('BookUploadedDetails')
-                .doc(loggedInEmail)
-                .update({
-              "BookDetails":{
-                "Book${widget.uploadedBookNo}":{
-                  'BackView': fileUrl,
-                }
-              },
-            });
             backViewUrl= fileUrl;
           });
         });
@@ -140,15 +122,6 @@ class _BookDetails extends State<BookDetails> {
         ref.getDownloadURL().then((fileUrl) {
           print(fileUrl);
           setState(() {
-            FirebaseFirestore.instance.collection('BookUploadedDetails')
-                .doc(loggedInEmail)
-                .update({
-              "BookDetails":{
-                "Book${widget.uploadedBookNo}":{
-                  '3DView': fileUrl,
-                }
-              },
-            });
             threeDViewUrl= fileUrl;
           });
         });

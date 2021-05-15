@@ -1,3 +1,7 @@
+import 'package:book_sharing_management_application/components/customized_button.dart';
+import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class ShowBookDetail extends StatefulWidget {
@@ -33,6 +37,7 @@ class ShowBookDetail extends StatefulWidget {
 }
 
 class _ShowBookDetailState extends State<ShowBookDetail> {
+  final _firestore = FirebaseFirestore.instance;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -84,6 +89,44 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
               ],
             ),
             Text("Purpose - ${widget.lend}, ${widget.sell}, ${widget.donate}"),
+            SizedBox(width: width*0.05,),
+            CustomizedNeumorphicButton(
+                fontSize: 24.0,
+                buttonText: "Submit",
+                onPressed: () {
+                  setState(() {
+                    uploadedBookNo=uploadedBookNo+1;
+                  });
+                  _firestore
+                      .collection('UserDetails')
+                      .doc(loggedInEmail)
+                      .update({
+                    "uploadedBookNo":uploadedBookNo,
+                  });
+                  _firestore
+                      .collection('BookUploadedDetails')
+                      .doc(loggedInEmail).collection("Book${widget.uploadedBookNo}").add({
+                        "BookName":widget.bookName,
+                        "BookAuthor":widget.bookAuthor,
+                        "BookEdition":widget.bookEdition,
+                        "BookISBN":widget.bookISBN,
+                        "FrontView":widget.frontViewUrl,
+                        "3DView":widget.threeDViewUrl,
+                        "BackView":widget.backViewUrl,
+                        "ForSell": widget.sell,
+                        "ForLending": widget.lend,
+                        "ForDonation":widget.donate,
+
+                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );
+                }),
           ],
         ),
       ),
