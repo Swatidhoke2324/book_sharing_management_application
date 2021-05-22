@@ -1,11 +1,7 @@
-import 'package:book_sharing_management_application/books/home/components/item_card.dart';
 import 'package:book_sharing_management_application/components/customized_grid_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../books/all_book.dart';
-import '../../books/details/details_screen.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:book_sharing_management_application/books/home/components/body.dart';
 
 class Explore extends StatefulWidget {
   @override
