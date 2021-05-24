@@ -1,7 +1,102 @@
 import 'package:book_sharing_management_application/components/customized_grid_tile.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firestore_search/firestore_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+class DataModel {
+  final String name;
+  final String description;
+
+  DataModel({this.name, this.description});
+
+  //Create a method to convert QuerySnapshot from Cloud Firestore to a list of objects of this DataModel
+  //This function in essential to the working of FirestoreSearchScaffold
+
+  List<DataModel> dataListFromSnapshot(QuerySnapshot querySnapshot) {
+  return querySnapshot.docs.map((snapshot) {
+  final Map<String, dynamic> dataMap = snapshot.data();
+  return DataModel(
+  name: dataMap['name'], description: dataMap['description']);
+  }).toList();
+  }
+}
+
+class Search extends StatefulWidget {
+  const Search({Key key}) : super(key: key);
+
+  @override
+  _SearchState createState() => _SearchState();
+}
+
+class _SearchState extends State<Search> {
+  String name = "";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: Card(
+          child: TextField(
+            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search), hintText: 'Search...'),
+            onChanged: (val) {
+              setState(() {
+                name = val;
+              });
+            },
+          ),
+        ),
+      ),
+      body: StreamBuilder<QuerySnapshot>(
+        stream: (name != "" && name != null)
+            ? FirebaseFirestore.instance
+            .collection('books')
+            .where("SearchIndex", arrayContains: name)
+            .snapshots()
+            : FirebaseFirestore.instance.collection("books").snapshots(),
+        builder: (context, snapshot) {
+          return (snapshot.connectionState == ConnectionState.waiting)
+              ? Center(child: CircularProgressIndicator())
+              : ListView.builder(
+            itemCount: snapshot.data.docs.length,
+            itemBuilder: (context, index) {
+              DocumentSnapshot data = snapshot.data.docs[index];
+              return Card(
+                child: Row(
+                  children: <Widget>[
+                    Image.network(
+                      data['imageUrl'],
+                      width: 150,
+                      height: 100,
+                      fit: BoxFit.fill,
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Text(
+                      data['name'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
 
 class Explore extends StatefulWidget {
   @override
