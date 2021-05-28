@@ -96,57 +96,87 @@ class _More extends State<More> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      const ListTile(
-                        leading: Icon(
-                          Icons.book_online_outlined,
-                          size: 40,
-                          color: Color(0xFF193566),
+                      Container(
+                        child:GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          onTap: () {print('tapped');},
+                          child: ListTile(
+                            leading:Icon(
+                              Icons.book_online_sharp,
+                              size: 40,
+                              color: Color(0xFF193566),
+                            ),
+                            title: Text('My Books'),
+                            subtitle: Text('Check your uploaded book status'),
+                          ),
                         ),
-                        title: Text('My Books'),
-                        subtitle: Text('Check your uploaded books status'),
                       ),
+
+
                       Divider(
                         color: Color(0xFFAFAFAF),
                         thickness: 1,
                         height: 5,
                       ),
-                      const ListTile(
-                        leading: Icon(
-                          CupertinoIcons.heart_circle,
-                          size: 37,
-                          color: Color(0xFF193566),
+
+                      Container(
+                        child:GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          onTap: () {print('tapped');},
+                          child: ListTile(
+                            leading:Icon(
+                              CupertinoIcons.heart_circle_fill,
+                              size: 40,
+                              color: Color(0xFF193566),
+                            ),
+                            title: Text('Social Works'),
+                            subtitle: Text('Gallery of Social Works done by our Team'),
+                          ),
                         ),
-                        title: Text('Social Works'),
-                        subtitle:
-                            Text('Gallery of social works done by our team'),
                       ),
+
                       Divider(
                         color: Color(0xFFAFAFAF),
                         thickness: 1,
                         height: 5,
                       ),
-                      const ListTile(
-                        leading: Icon(
-                          CupertinoIcons.phone_fill_arrow_up_right,
-                          size: 33,
-                          color: Color(0xFF193566),
+
+                      Container(
+                        child:GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          onTap: () {print('tapped');},
+                          child: ListTile(
+                            leading:Icon(
+                              CupertinoIcons.phone_fill_arrow_up_right,
+                              size: 40,
+                              color: Color(0xFF193566),
+                            ),
+                            title: Text('Contact Us'),
+                            subtitle: Text('Help regarding any issue'),
+                          ),
                         ),
-                        title: Text('Contact Us'),
-                        subtitle: Text('Help regarding any issue'),
                       ),
+
                       Divider(
                         color: Color(0xFFAFAFAF),
                         thickness: 1,
                         height: 5,
                       ),
-                      const ListTile(
-                        leading: Icon(
-                          CupertinoIcons.envelope_open_fill,
-                          size: 31,
-                          color: Color(0xFF193566),
+
+                      Container(
+                        child:GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          onTap: () {print('tapped');},
+                          child: ListTile(
+                            leading:Icon(
+                              CupertinoIcons.envelope_open_fill,
+                              size: 40,
+                              color: Color(0xFF193566),
+                            ),
+                            title: Text('Refer and Earn'),
+                            subtitle: Text('Invite friends and earn rewards'),
+                          ),
                         ),
-                        title: Text('Refer & Earn'),
-                        subtitle: Text('Invite friends and earn rewards'),
                       ),
                     ],
                   ),

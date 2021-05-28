@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:book_sharing_management_application/books/home/components/body.dart';
+import 'package:book_sharing_management_application/screens/explore/explore.dart';
+import 'package:book_sharing_management_application/screens/explore/searchstate.dart';
 import 'package:book_sharing_management_application/screens/more/more.dart';
 import 'package:book_sharing_management_application/screens/request/request.dart';
 import 'package:book_sharing_management_application/screens/upload/validate.dart';
@@ -74,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     UploadPageValidate(),
     Request(),
-    exploreBody(),
+    SearchPage(),
     Wishlist(),
     More(),
   ];
