@@ -17,6 +17,33 @@ class Upload extends StatefulWidget {
 }
 
 class _Upload extends State<Upload> {
+  void getData() {
+    _firestore
+        .collection('UserDetails')
+        .doc(loggedInEmail)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          fetchData=documentSnapshot.data();
+          uploadedBookNo=fetchData["uploadedBookNo"];
+          print("BookNo: $uploadedBookNo");
+        }
+      });
+    });
+    _firestore
+        .collection('BookUploadedDetails')
+        .doc(loggedInEmail)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          bookUploadedDetails = documentSnapshot.data();
+          bookUploadedList=bookUploadedDetails["Books"];
+        }
+      });
+    });
+  }
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final _firestore = FirebaseFirestore.instance;
   bool showSpinner = false;
@@ -80,7 +107,7 @@ class _Upload extends State<Upload> {
                             children: <Widget>[
                               SizedBox(height: height * 0.04),
                               Image.asset("assets/images/login.png"),
-                              //TODO: Validate all the credentials.
+                              IconButton(icon: Icon(Icons.refresh), onPressed: (){getData();}),
                               CustomizedTextFormField(
                                 hintText: "Book Name",
                                 hideText: false,

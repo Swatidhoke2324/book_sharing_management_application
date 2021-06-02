@@ -42,7 +42,7 @@ class ColorAndSize extends StatelessWidget {
                   text: "Size\n",
                 ),
                 TextSpan(
-                  text: "${product.size} cm",
+                  text: "product.size cm",
                   style: Theme.of(context)
                       .textTheme
                       .headline5

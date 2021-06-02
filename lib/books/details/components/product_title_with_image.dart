@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/data.dart';
 import 'package:flutter/material.dart';
 import '../../all_book.dart';
 
@@ -23,7 +24,7 @@ class ProductTitleWithImage extends StatelessWidget {
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            product.title,
+            "product.title",
             style: Theme.of(context)
                 .textTheme
                 .headline4
@@ -37,20 +38,23 @@ class ProductTitleWithImage extends StatelessWidget {
                   children: [
                     TextSpan(text: "Price\n"),
                     TextSpan(
-                      text: "\$${product.price}",
+                      text: "price",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ),
-              SizedBox(width: kDefaultPaddin),
-              Expanded(
-                child: Hero(
-                  tag: "${product.id}",
-                  child: Image.asset(
-                    product.image,
-                    fit: BoxFit.fill,
+              SizedBox(width: kDefaultPaddin + 100),
+              Container(
+                height: 200,
+                child: Expanded(
+                  child: Hero(
+                    tag: "product.id",
+                    child: Image.network(
+                       frontViewDummyUrl,
+                      fit: BoxFit.scaleDown,
+                    ),
                   ),
                 ),
               )

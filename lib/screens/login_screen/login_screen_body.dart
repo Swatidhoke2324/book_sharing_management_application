@@ -261,5 +261,17 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         }
       });
     });
+    _firestore
+        .collection('BookUploadedDetails')
+        .doc(email)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          bookUploadedDetails = documentSnapshot.data();
+          bookUploadedList=bookUploadedDetails["Books"];
+        }
+      });
+    });
   }
 }

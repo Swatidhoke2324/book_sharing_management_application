@@ -39,7 +39,15 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return widget.onPress;
+                        },
+                      ),
+                    );                  },
                   child: Container(
                     height: widget.givenheight,
                     child: widget.Image,

@@ -94,6 +94,8 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
                 fontSize: 24.0,
                 buttonText: "Submit",
                 onPressed: () {
+                  print(bookUploadedList);
+                  print(bookUploadedDetails);
                   setState(() {
                     uploadedBookNo=uploadedBookNo+1;
                   });
@@ -105,18 +107,19 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
                   });
                   _firestore
                       .collection('BookUploadedDetails')
-                      .doc(loggedInEmail).collection("Book${widget.uploadedBookNo}").add({
-                        "BookName":widget.bookName,
-                        "BookAuthor":widget.bookAuthor,
-                        "BookEdition":widget.bookEdition,
-                        "BookISBN":widget.bookISBN,
-                        "FrontView":widget.frontViewUrl,
-                        "3DView":widget.threeDViewUrl,
-                        "BackView":widget.backViewUrl,
-                        "ForSell": widget.sell,
-                        "ForLending": widget.lend,
-                        "ForDonation":widget.donate,
-
+                      .doc(loggedInEmail).update({
+                    "Books":bookUploadedList + [ {
+                      "BookName": widget.bookName,
+                      "BookAuthor": widget.bookAuthor,
+                      "BookEdition": widget.bookEdition,
+                      "BookISBN": widget.bookISBN,
+                      "FrontView": widget.frontViewUrl,
+                      "3DView": widget.threeDViewUrl,
+                      "BackView": widget.backViewUrl,
+                      "ForSell": widget.sell,
+                      "ForLending": widget.lend,
+                      "ForDonation": widget.donate,
+                    }]
                   });
                   Navigator.push(
                     context,
