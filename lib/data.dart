@@ -17,4 +17,14 @@ List bookUploadedListDonate=[];
 List bookUploadedListUser;
 List idList;
 
+List userTransactionList=[];
+List lenderTransactionList=[];
+
 Map lenderDetails;
+String lenderName;
+String lenderEmail;
+String lenderPhoneNo;
+
+Map bookBorrowedDetails;
+List sentRequestList;
+List receivedRequestList;

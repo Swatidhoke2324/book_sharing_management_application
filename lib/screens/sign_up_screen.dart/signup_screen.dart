@@ -180,7 +180,7 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                           .set({
                                       });
                                       FirebaseFirestore.instance
-                                          .collection('UserTransactions')
+                                          .collection('BorrowRequests')
                                           .doc(email)
                                           .set({
                                       });

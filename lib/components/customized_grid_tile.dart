@@ -1,3 +1,5 @@
+import 'package:book_sharing_management_application/data.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
@@ -6,11 +8,15 @@ class CustomizedGridTile extends StatefulWidget {
   final givenheight;
   final onPress;
   final image;
+  final bookPostedBy;
   final bookName;
-  const CustomizedGridTile({
+
+  CustomizedGridTile({
     this.givenheight,
     this.onPress,
-   this.image, this.bookName,
+    this.image,
+    this.bookName,
+    this.bookPostedBy,
   });
 
   @override
@@ -49,13 +55,25 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
                           return widget.onPress;
                         },
                       ),
-                    );                  },
+                    );
+                  },
                   child: Container(
-                    child: Column(children: [
-                      Container(child: Image.network(widget.image) , height: 100,),
-                      SizedBox(height: 05,),
-                      Text(widget.bookName,textAlign: TextAlign.center,style: TextStyle(fontSize: 12),),
-                    ],),
+                    child: Column(
+                      children: [
+                        Container(
+                          child: Image.network(widget.image),
+                          height: 100,
+                        ),
+                        SizedBox(
+                          height: 05,
+                        ),
+                        Text(
+                          widget.bookName,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 12),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

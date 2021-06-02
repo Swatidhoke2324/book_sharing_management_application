@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     UploadPageValidate(),
-    Request(),
+    ValidateRequestPage(),
     Explore(),
     Wishlist(),
     More(),

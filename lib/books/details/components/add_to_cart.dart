@@ -8,7 +8,7 @@ import '../../all_book.dart';
 
 import '../../constants.dart';
 
-class AddToCart extends StatelessWidget {
+class AddToCart extends StatefulWidget {
   AddToCart({
     Key key,
     @required this.product,
@@ -21,12 +21,13 @@ class AddToCart extends StatelessWidget {
   final type;
   final reDirect;
   final bookPostedBy;
-  String lenderName;
-  String lenderEmail;
-  String lenderPhoneNo;
   final typeOfBook;
 
+  @override
+  _AddToCartState createState() => _AddToCartState();
+}
 
+class _AddToCartState extends State<AddToCart> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -59,45 +60,12 @@ class AddToCart extends StatelessWidget {
                     borderRadius: BorderRadius.circular(18)),
                 color: kPrimaryColor,
                 onPressed: () {
-                  if (typeOfBook=="borrow"){
-                  FirebaseFirestore.instance
-                      .collection('UserDetails')
-                      .doc(bookPostedBy)
-                      .get()
-                      .then((DocumentSnapshot documentSnapshot) {
-                    if (documentSnapshot.exists) {
-                      lenderDetails = documentSnapshot.data();
-                      lenderEmail=lenderDetails["E-Mail"];
-                      lenderName=lenderDetails["UserName"];
-                      lenderPhoneNo=lenderDetails["PhoneNo."];
-                    }
-                    print(lenderEmail);
-                  });
-                  FirebaseFirestore.instance
-                      .collection('UserTransactions')
-                      .doc(loggedInEmail)
-                      .update({
-                    "SentRequests": [{
-                      "LenderName": lenderName,
-                      "LenderEmail": lenderEmail,
-                      "LenderPhoneNo": lenderPhoneNo,}
-                    ],
-                  });
-                  FirebaseFirestore.instance
-                      .collection('UserTransactions')
-                      .doc(bookPostedBy)
-                      .update({
-                    "ReceivedRequests": [ {
-                      "BorrowerName": loggedInName,
-                      "BorrowerEmail": loggedInEmail,
-                      "BorrowerPhoneNo": loggedInPhoneNo,
-                    }],
-                  });
-                  Navigator.push(
+                  if (widget.typeOfBook=="borrow"){
+                    Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return SendRequest(lenderEmail: lenderEmail,lenderName: lenderName,lenderPhoneNo: lenderPhoneNo,);
+                        return SendRequest();
                       },
                     ),
                   );
@@ -108,7 +76,7 @@ class AddToCart extends StatelessWidget {
                   }
                 },
                 child: Text(
-                  type,
+                  widget.type,
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
