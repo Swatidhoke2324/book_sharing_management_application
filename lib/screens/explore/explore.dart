@@ -228,7 +228,7 @@ class _Explore extends State<Explore> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Category of Books",
+                          "Books You can Buy",
                           style: TextStyle(
                             color: Color(0xFF223D6B),
                             fontSize: 17,
@@ -241,11 +241,11 @@ class _Explore extends State<Explore> {
                         height: 190.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemCount: bookUploadedList.length,
+                          itemCount: bookUploadedListBuy.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedList[index]["BookName"],
-                                bookImage: bookUploadedList[index]["FrontView"],
+                                bookName: bookUploadedListBuy[index]["BookName"],
+                                bookImage: bookUploadedListBuy[index]["FrontView"],
                                 type: "Buy");
                           },
                           separatorBuilder: (BuildContext context, int index) =>
@@ -261,7 +261,7 @@ class _Explore extends State<Explore> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Category of Books",
+                          "Books you can Borrow",
                           style: TextStyle(
                             color: Color(0xFF223D6B),
                             fontSize: 17,
@@ -274,12 +274,12 @@ class _Explore extends State<Explore> {
                         height: 190.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemCount: bookUploadedList.length,
+                          itemCount: bookUploadedListBorrow.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedList[index]["BookName"],
-                                bookImage: bookUploadedList[index]["FrontView"],
-                                type: "Buy");
+                                bookName: bookUploadedListBorrow[index]["BookName"],
+                                bookImage: bookUploadedListBorrow[index]["FrontView"],
+                                type: "Borrow");
                           },
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(),
@@ -294,7 +294,7 @@ class _Explore extends State<Explore> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
-                          "Category of Books",
+                          "Books you can take it for Free",
                           style: TextStyle(
                             color: Color(0xFF223D6B),
                             fontSize: 17,
@@ -307,12 +307,12 @@ class _Explore extends State<Explore> {
                         height: 190.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          itemCount: bookUploadedList.length,
+                          itemCount: bookUploadedListDonate.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedList[index]["BookName"],
-                                bookImage: bookUploadedList[index]["FrontView"],
-                                type: "Buy");
+                                bookName: bookUploadedListDonate[index]["BookName"],
+                                bookImage: bookUploadedListDonate[index]["FrontView"],
+                                type: "Take it");
                           },
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(),
