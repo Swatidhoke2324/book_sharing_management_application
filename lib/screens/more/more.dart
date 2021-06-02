@@ -1,5 +1,6 @@
 
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/screens/more/contact_us.dart';
 import 'package:book_sharing_management_application/screens/more/my_books.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -154,7 +155,16 @@ class _More extends State<More> {
                       Container(
                         child:GestureDetector(
                           behavior: HitTestBehavior.translucent,
-                          onTap: () {print('tapped');},
+                          onTap: (){
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                        builder: (context) {
+                        return ContactUs();
+                        },
+                        ),
+                        );
+                        },
                           child: ListTile(
                             leading:Icon(
                               CupertinoIcons.phone_fill_arrow_up_right,
