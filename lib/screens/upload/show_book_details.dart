@@ -108,7 +108,7 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
                   _firestore
                       .collection('BookUploadedDetails')
                       .doc(loggedInEmail).update({
-                    "Books":bookUploadedList + [ {
+                    "Books":bookUploadedListUser + [ {
                       "BookName": widget.bookName,
                       "BookAuthor": widget.bookAuthor,
                       "BookEdition": widget.bookEdition,
