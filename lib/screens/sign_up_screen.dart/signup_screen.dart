@@ -2,6 +2,7 @@ import 'package:book_sharing_management_application/components/customized_alert_
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
 import 'package:book_sharing_management_application/components/customized_text_widget.dart';
+import 'package:book_sharing_management_application/data.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -166,6 +167,12 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                         'E-Mail': email,
                                         'PhoneNo.': contactNumber,
                                         "uploadedBookNo":0,
+                                      });
+                                      FirebaseFirestore.instance
+                                          .collection('UserIds')
+                                          .doc("email")
+                                          .set({
+                                        'ids': idList+ [email],
                                       });
                                       Navigator.push(
                                         context,
