@@ -12,7 +12,7 @@ class UploadPageValidate extends StatefulWidget {
 class _UploadPageValidateState extends State<UploadPageValidate> {
   @override
   Widget build(BuildContext context) {
-    if (loggedInEmail==null){
+    if (loggedInEmail == null) {
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFF223D6B),
@@ -25,10 +25,16 @@ class _UploadPageValidateState extends State<UploadPageValidate> {
           ),
         ),
         backgroundColor: Color(0xFFECF0F3),
-        body: Container(
-        child: Column(children: [
-          Text("Your are not signed in"),
-          CustomizedNeumorphicButton(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Center(
+              child: Text(
+                "You are not signed in. Kindly Sign in to upload book/s.",
+              ),
+            ),
+            CustomizedNeumorphicButton(
               fontSize: 24.0,
               buttonText: "Login",
               onPressed: () {
@@ -40,11 +46,12 @@ class _UploadPageValidateState extends State<UploadPageValidate> {
                     },
                   ),
                 );
-              }),
-        ],),
-      ),);
-    }
-    else{
+              },
+            ),
+          ],
+        ),
+      );
+    } else {
       return Upload();
     }
   }
