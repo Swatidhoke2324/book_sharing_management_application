@@ -18,7 +18,7 @@ class _RequestPageValidateState extends State<RequestPageValidate> {
         appBar: AppBar(
           backgroundColor: Color(0xFF223D6B),
           title: Text(
-            "Requests",
+            "Book Credentials",
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
@@ -32,7 +32,7 @@ class _RequestPageValidateState extends State<RequestPageValidate> {
           children: [
             Center(
               child: Text(
-                "You are not signed in. Kindly Sign in to see the Requests.",
+                "You are not signed in. Kindly Sign in to upload book/s.",
               ),
             ),
             CustomizedNeumorphicButton(
