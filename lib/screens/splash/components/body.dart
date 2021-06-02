@@ -39,7 +39,7 @@ class _BodyState extends State<Body> {
           setState(() {
             idList = userIdData["ids"];
           });
-          print("BookNo: $idList");
+          print("$idList");
         }
       });
     });

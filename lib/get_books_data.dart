@@ -2,9 +2,11 @@ import 'package:book_sharing_management_application/data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void getBooksData() {
+  // for(int i=0;i<=userIdData.length; ++i)
+// {
   FirebaseFirestore.instance
       .collection('BookUploadedDetails')
-      .doc("suyashdahake410@gmail.com")
+      .doc(idList[0])
       .get()
       .then((DocumentSnapshot documentSnapshot) {
     if (documentSnapshot.exists) {
@@ -26,6 +28,7 @@ void getBooksData() {
       print("Book Data  $bookUploadedListBorrow");
     }
   });
+// }
 }
 
 
