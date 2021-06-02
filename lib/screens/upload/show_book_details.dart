@@ -88,7 +88,7 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
                 ),
               ],
             ),
-            Text("Purpose - ${widget.lend}, ${widget.sell}, ${widget.donate}"),
+            Text("Purpose - Sell : ${widget.sell},Lend : ${widget.lend}, Donate : ${widget.donate}"),
             SizedBox(width: width*0.05,),
             CustomizedNeumorphicButton(
                 fontSize: 24.0,
@@ -119,6 +119,7 @@ class _ShowBookDetailState extends State<ShowBookDetail> {
                       "ForSell": widget.sell,
                       "ForLending": widget.lend,
                       "ForDonation": widget.donate,
+                      "BookPostedBy":loggedInEmail,
                     }]
                   });
                   Navigator.push(

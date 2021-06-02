@@ -2,6 +2,10 @@ import 'package:book_sharing_management_application/data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 void getBooksData() {
+  bookUploadedListBuy.clear();
+  bookUploadedListBorrow.clear();
+  bookUploadedListDonate.clear();
+
   for(int i=0;i<idList.length; i++)
 {
   FirebaseFirestore.instance

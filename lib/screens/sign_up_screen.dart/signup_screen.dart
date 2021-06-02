@@ -174,6 +174,16 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                           .set({
                                         'ids': idList+ [email],
                                       });
+                                      FirebaseFirestore.instance
+                                          .collection('BookUploadedDetails')
+                                          .doc(email)
+                                          .set({
+                                      });
+                                      FirebaseFirestore.instance
+                                          .collection('UserTransactions')
+                                          .doc(email)
+                                          .set({
+                                      });
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(

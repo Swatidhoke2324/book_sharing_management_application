@@ -163,7 +163,6 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                               if (user != null) {
                                 loggedInEmail=email;
                                 getData();
-                                // getBooksData();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -259,6 +258,8 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         if (documentSnapshot.exists) {
           fetchData=documentSnapshot.data();
           uploadedBookNo=fetchData["uploadedBookNo"];
+          loggedInPhoneNo= fetchData["PhoneNo."];
+          loggedInName=fetchData["UserName"];
           print("BookNo: $uploadedBookNo");
         }
       });

@@ -13,9 +13,11 @@ class Body extends StatelessWidget {
   final type;
   final imageUrl;
   final authorName;
+  final reDirect;
+  final bookPostedBy;
+  final typeOfBook;
 
-
-  const Body({Key key, this.product, this.bookName, this.type, this.imageUrl, this.authorName}) : super(key: key);
+  const Body({Key key, this.product, this.bookName, this.type, this.imageUrl, this.authorName, this.reDirect, this.bookPostedBy, this.typeOfBook}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // It provide us total height and width
@@ -50,7 +52,7 @@ class Body extends StatelessWidget {
                       SizedBox(height: kDefaultPaddin / 2),
                       CounterWithFavBtn(),
                       SizedBox(height: kDefaultPaddin / 2),
-                      AddToCart(product: product,type: type,)
+                      AddToCart(product: product,type: type,reDirect: reDirect,bookPostedBy: bookPostedBy,typeOfBook:typeOfBook)
                     ],
                   ),
                 ),

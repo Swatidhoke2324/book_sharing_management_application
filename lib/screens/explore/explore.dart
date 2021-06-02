@@ -251,6 +251,9 @@ class _Explore extends State<Explore> {
                               type: "Buy",
                               authorName: bookUploadedListBuy[index]
                                   ["BookAuthor"],
+                              typeOfBook: "sell",
+                              bookPostedBy: bookUploadedListBorrow[index]
+                                  ["BookPostedBy"],
                             );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
@@ -289,6 +292,9 @@ class _Explore extends State<Explore> {
                               type: "Borrow",
                               authorName: bookUploadedListBorrow[index]
                                   ["BookAuthor"],
+                              typeOfBook: "borrow",
+                              bookPostedBy: bookUploadedListBorrow[index]
+                                  ["BookPostedBy"],
                             );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
@@ -327,6 +333,9 @@ class _Explore extends State<Explore> {
                               type: "Take it",
                               authorName: bookUploadedListDonate[index]
                                   ["BookAuthor"],
+                              bookPostedBy: bookUploadedListBorrow[index]
+                                  ["BookPostedBy"],
+                              typeOfBook: "donate",
                             );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
@@ -347,6 +356,9 @@ class _Explore extends State<Explore> {
     String type,
     String bookImage,
     String authorName,
+    String reDirect,
+    String typeOfBook,
+    String bookPostedBy,
   }) {
     return Container(
       child: CustomizedGridTile(
@@ -355,6 +367,9 @@ class _Explore extends State<Explore> {
           type: type,
           imageUrl: bookImage,
           authorName: authorName,
+          reDirect: reDirect,
+          typeOfBook: typeOfBook,
+          bookPostedBy: bookPostedBy,
         ),
         image: bookImage,
         bookName: bookName,

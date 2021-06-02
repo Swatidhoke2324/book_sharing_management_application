@@ -1,4 +1,7 @@
 String loggedInEmail;
+String loggedInPhoneNo;
+String loggedInName;
+
 int uploadedBookNo;
 Map fetchData;
 String frontViewDummyUrl="https://firebasestorage.googleapis.com/v0/b/book-sharing-management-app.appspot.com/o/AppData%2FImages%2FFrontViewDummy.jpeg?alt=media&token=37de8cec-2585-4579-928d-8445cc385b28";
@@ -13,3 +16,5 @@ List bookUploadedListBorrow=[];
 List bookUploadedListDonate=[];
 List bookUploadedListUser;
 List idList;
+
+Map lenderDetails;
