@@ -1,6 +1,6 @@
 import 'package:book_sharing_management_application/books/details/details_screen.dart';
 import 'package:book_sharing_management_application/components/customized_grid_tile.dart';
-import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
+import 'package:book_sharing_management_application/data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,23 @@ class Search extends StatefulWidget {
 
 class _SearchState extends State<Search> {
   String name = "";
-
+  @override
+  void initState() {
+    super.initState();
+print(bookUploadedList);
+  }
+  // void getData() {FirebaseFirestore.instance
+  //       .collection('UserDetails')
+  //       .doc(loggedInEmail)
+  //       .get()
+  //       .then((DocumentSnapshot documentSnapshot) {
+  //     setState(() {
+  //       if (documentSnapshot.exists) {
+  //         var userDetails = documentSnapshot.data();
+  //       }
+  //     });
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -221,101 +237,38 @@ class _Explore extends State<Explore> {
                           children: [
                             Container(
                               child: CustomizedGridTile(
-                                onPress:  DetailsScreen(),
-                                Image: Image.asset("assets/images/login.png"),
+                                onPress:  DetailsScreen(bookName: bookUploadedList[0]["BookName"],type: "Buy",imageUrl: bookUploadedList[0]["FrontView"],),
+                                image: bookUploadedList[0]["FrontView"],
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: bookUploadedList[1]["FrontView"],
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                          ],
-                        )),
-                  ],
-                ),
-              ),
-              SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                          "Category of Books",
-                          style: TextStyle(
-                            color: Color(0xFF223D6B),
-                            fontSize: 17,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                        height: 190.0,
-                        child: ListView(
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                           ],
@@ -347,38 +300,101 @@ class _Explore extends State<Explore> {
                             Container(
                               child: CustomizedGridTile(
                                 // onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
                                 // onPress: null,
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
                               ),
                             ),
                             Container(
                               child: CustomizedGridTile(
-                                Image: Image.asset("assets/images/login.png"),
+                                image: "",
+                              ),
+                            ),
+                          ],
+                        )),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          "Category of Books",
+                          style: TextStyle(
+                            color: Color(0xFF223D6B),
+                            fontSize: 17,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                        height: 190.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+                            Container(
+                              child: CustomizedGridTile(
+                                // onPress: null,
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                // onPress: null,
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                image: "",
+                              ),
+                            ),
+                            Container(
+                              child: CustomizedGridTile(
+                                image: "",
                               ),
                             ),
                           ],

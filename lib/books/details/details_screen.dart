@@ -6,15 +6,19 @@ import 'components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Product product;
+  final bookName;
+  final type;
+  final imageUrl;
 
-  const DetailsScreen({Key key, this.product}) : super(key: key);
+
+  const DetailsScreen({Key key, this.product, this.bookName, this.type, this.imageUrl}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // each product have a color
       backgroundColor: Colors.grey,
       appBar: buildAppBar(context),
-      body: Body(product: product),
+      body: Body(product: product,bookName: bookName,type: type,imageUrl: imageUrl,),
     );
   }
 

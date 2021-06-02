@@ -10,8 +10,12 @@ import 'product_title_with_image.dart';
 
 class Body extends StatelessWidget {
   final Product product;
+  final bookName;
+  final type;
+  final imageUrl;
 
-  const Body({Key key, this.product}) : super(key: key);
+
+  const Body({Key key, this.product, this.bookName, this.type, this.imageUrl}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // It provide us total height and width
@@ -50,7 +54,7 @@ class Body extends StatelessWidget {
                     ],
                   ),
                 ),
-                ProductTitleWithImage(product: product)
+                ProductTitleWithImage(product: product,bookName: bookName,type: type,imageUrl: imageUrl,)
               ],
             ),
           )

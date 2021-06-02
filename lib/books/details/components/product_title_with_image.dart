@@ -7,10 +7,13 @@ import '../../constants.dart';
 class ProductTitleWithImage extends StatelessWidget {
   const ProductTitleWithImage({
     Key key,
-    @required this.product,
+    @required this.product, this.type, this.bookName, this.imageUrl,
   }) : super(key: key);
 
   final Product product;
+  final type;
+  final bookName;
+  final imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +23,11 @@ class ProductTitleWithImage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Aristocratic Hand Bag",
+            "Book You Can $type",
             style: TextStyle(color: Colors.white),
           ),
           Text(
-            "product.title",
+            "$bookName",
             style: Theme.of(context)
                 .textTheme
                 .headline4
@@ -38,7 +41,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   children: [
                     TextSpan(text: "Price\n"),
                     TextSpan(
-                      text: "price",
+                      text: "Rs. 300",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
@@ -52,7 +55,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   child: Hero(
                     tag: "product.id",
                     child: Image.network(
-                       frontViewDummyUrl,
+                       imageUrl,
                       fit: BoxFit.scaleDown,
                     ),
                   ),
