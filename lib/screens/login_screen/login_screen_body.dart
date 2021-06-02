@@ -163,7 +163,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                               if (user != null) {
                                 loggedInEmail=email;
                                 getData();
-                                getBooksData();
+                                // getBooksData();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -263,6 +263,18 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         }
       });
     });
-    print(bookUploadedList);
+    FirebaseFirestore.instance
+        .collection('BookUploadedDetails')
+        .doc(email)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          bookUploadedDetails = documentSnapshot.data();
+          bookUploadedListUser = bookUploadedDetails["Books"];
+        }
+      });
+    });
+    print(bookUploadedListUser);
   }
 }

@@ -54,21 +54,18 @@ class _BodyState extends State<Body> {
         if (documentSnapshot.exists) {
           bookUploadedDetails = documentSnapshot.data();
           bookUploadedList = bookUploadedDetails["Books"];
-         type= bookUploadedList[0]['ForSell'];
-
-
           for (int i = 0; i <= bookUploadedList.length; ++i) {
             if (bookUploadedList[i]['ForSell'] == true) {
               setState(() {
                 bookUploadedListBuy.add(bookUploadedList[i]);
               });
             }
-            if (bookUploadedDetails["Books"][i]['ForLending'] == true) {
+            if (bookUploadedList[i]['ForLending'] == true) {
               setState(() {
                 bookUploadedListBorrow.add(bookUploadedList[i]) ;
               });
             }
-            if (bookUploadedDetails["Books"][i]['ForDonation'] == true) {
+            if (bookUploadedList[i]['ForDonation'] == true) {
               setState(() {
                 bookUploadedListDonate.add(bookUploadedList[i]);
               });
@@ -76,7 +73,6 @@ class _BodyState extends State<Body> {
           }
           print("Book Data $type $bookUploadedListBuy");
           print("Book Data $type $bookUploadedListBorrow");
-
         }
       });
     });

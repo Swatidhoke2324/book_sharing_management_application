@@ -7,9 +7,9 @@ String threeDViewDummyUrl="https://firebasestorage.googleapis.com/v0/b/book-shar
 Map bookUploadedDetails;
 
 Map userIdData;
-List bookUploadedList=[];
+List bookUploadedList;
 List bookUploadedListBuy=[];
 List bookUploadedListBorrow=[];
 List bookUploadedListDonate=[];
-
+List bookUploadedListUser;
 List idList;
