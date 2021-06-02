@@ -1,14 +1,7 @@
 import 'package:book_sharing_management_application/constants.dart';
 import 'package:book_sharing_management_application/data.dart';
-import 'package:book_sharing_management_application/get_books_data.dart';
-import 'package:book_sharing_management_application/screens/explore/explore.dart';
-import 'package:book_sharing_management_application/screens/forgot_password/forgot_password.dart';
 import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
-import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
-import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';
 import 'package:book_sharing_management_application/size_config.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 

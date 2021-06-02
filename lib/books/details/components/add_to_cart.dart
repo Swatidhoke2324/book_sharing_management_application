@@ -1,7 +1,5 @@
 import 'package:book_sharing_management_application/books/details/send_request.dart';
 import 'package:book_sharing_management_application/constants.dart';
-import 'package:book_sharing_management_application/data.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../all_book.dart';

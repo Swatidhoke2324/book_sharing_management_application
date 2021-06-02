@@ -1,15 +1,10 @@
 
-import 'package:book_sharing_management_application/data.dart';
 import 'package:book_sharing_management_application/screens/more/contact_us.dart';
 import 'package:book_sharing_management_application/screens/more/my_books.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:image_picker/image_picker.dart';
-import 'more_cards.dart';
 
 class More extends StatefulWidget {
   @override

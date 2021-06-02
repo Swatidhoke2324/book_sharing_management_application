@@ -1,9 +1,7 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
-import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
 import 'package:book_sharing_management_application/services/otp.dart';
 import 'package:flutter/material.dart';
-import 'package:pinput/pin_put/pin_put.dart';
 
 class PhoneAuthScreen extends StatefulWidget {
   @override

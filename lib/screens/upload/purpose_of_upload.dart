@@ -1,5 +1,4 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
-import 'package:book_sharing_management_application/data.dart';
 import 'package:book_sharing_management_application/screens/upload/show_book_details.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,7 +21,6 @@ class PurposeOfUpload extends StatefulWidget {
 }
 
 class _PurposeOfUpload extends State<PurposeOfUpload> {
-  final _firestore = FirebaseFirestore.instance;
   bool sell = false;
   bool lend = false;
   bool donate = false;

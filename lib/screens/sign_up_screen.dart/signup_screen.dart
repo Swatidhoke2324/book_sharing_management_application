@@ -22,7 +22,6 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
   TextEditingController password = TextEditingController();
   TextEditingController confirmPassword = TextEditingController();
 
-  final _firestore = FirebaseFirestore.instance;
   final _auth = FirebaseAuth.instance;
   bool showSpinner = false;
   String fullName;

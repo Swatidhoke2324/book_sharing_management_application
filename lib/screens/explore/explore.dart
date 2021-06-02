@@ -1,7 +1,6 @@
 import 'package:book_sharing_management_application/books/details/details_screen.dart';
 import 'package:book_sharing_management_application/components/customized_grid_tile.dart';
 import 'package:book_sharing_management_application/data.dart';
-import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

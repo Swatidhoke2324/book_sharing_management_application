@@ -4,7 +4,6 @@ import 'package:book_sharing_management_application/components/customized_text_f
 import 'package:book_sharing_management_application/components/customized_text_widget.dart';
 import 'package:book_sharing_management_application/components/social_media_radio_button.dart';
 import 'package:book_sharing_management_application/data.dart';
-import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:book_sharing_management_application/screens/forgot_password/forgot_password.dart';
 import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
 import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';

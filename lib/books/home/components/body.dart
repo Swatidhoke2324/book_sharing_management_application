@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../../all_book.dart';
 import '../../details/details_screen.dart';
-
-import 'categorries.dart';
 import 'item_card.dart';
 
 class exploreBody extends StatelessWidget {
