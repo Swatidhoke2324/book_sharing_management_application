@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -5,10 +6,11 @@ class CustomizedGridTile extends StatefulWidget {
   final givenheight;
   final onPress;
   final image;
+  final bookName;
   const CustomizedGridTile({
     this.givenheight,
     this.onPress,
-   this.image,
+   this.image, this.bookName,
   });
 
   @override
@@ -49,8 +51,11 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
                       ),
                     );                  },
                   child: Container(
-                    height: widget.givenheight,
-                    child: Image.network(widget.image),
+                    child: Column(children: [
+                      Container(child: Image.network(widget.image) , height: 100,),
+                      SizedBox(height: 05,),
+                      Text(widget.bookName,textAlign: TextAlign.center,),
+                    ],),
                   ),
                 ),
               ),

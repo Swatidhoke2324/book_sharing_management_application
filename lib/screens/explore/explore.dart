@@ -16,11 +16,11 @@ class DataModel {
   //This function in essential to the working of FirestoreSearchScaffold
 
   List<DataModel> dataListFromSnapshot(QuerySnapshot querySnapshot) {
-  return querySnapshot.docs.map((snapshot) {
-  final Map<String, dynamic> dataMap = snapshot.data();
-  return DataModel(
-  name: dataMap['name'], description: dataMap['description']);
-  }).toList();
+    return querySnapshot.docs.map((snapshot) {
+      final Map<String, dynamic> dataMap = snapshot.data();
+      return DataModel(
+          name: dataMap['name'], description: dataMap['description']);
+    }).toList();
   }
 }
 
@@ -33,11 +33,13 @@ class Search extends StatefulWidget {
 
 class _SearchState extends State<Search> {
   String name = "";
+
   @override
   void initState() {
     super.initState();
-print(bookUploadedList);
+    print(bookUploadedList);
   }
+
   // void getData() {FirebaseFirestore.instance
   //       .collection('UserDetails')
   //       .doc(loggedInEmail)
@@ -50,6 +52,11 @@ print(bookUploadedList);
   //     });
   //   });
   // }
+
+  void makeCards() {
+    for (int i = 0; i <= bookUploadedList.length; i++) {}
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,41 +82,41 @@ print(bookUploadedList);
       body: StreamBuilder<QuerySnapshot>(
         stream: (name != "" && name != null)
             ? FirebaseFirestore.instance
-            .collection('books')
-            .where("SearchIndex", arrayContains: name)
-            .snapshots()
+                .collection('books')
+                .where("SearchIndex", arrayContains: name)
+                .snapshots()
             : FirebaseFirestore.instance.collection("books").snapshots(),
         builder: (context, snapshot) {
           return (snapshot.connectionState == ConnectionState.waiting)
               ? Center(child: CircularProgressIndicator())
               : ListView.builder(
-            itemCount: snapshot.data.docs.length,
-            itemBuilder: (context, index) {
-              DocumentSnapshot data = snapshot.data.docs[index];
-              return Card(
-                child: Row(
-                  children: <Widget>[
-                    Image.network(
-                      data['imageUrl'],
-                      width: 150,
-                      height: 100,
-                      fit: BoxFit.fill,
-                    ),
-                    SizedBox(
-                      width: 25,
-                    ),
-                    Text(
-                      data['name'],
-                      style: TextStyle(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
+                  itemCount: snapshot.data.docs.length,
+                  itemBuilder: (context, index) {
+                    DocumentSnapshot data = snapshot.data.docs[index];
+                    return Card(
+                      child: Row(
+                        children: <Widget>[
+                          Image.network(
+                            data['imageUrl'],
+                            width: 150,
+                            height: 100,
+                            fit: BoxFit.fill,
+                          ),
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Text(
+                            data['name'],
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
-                ),
-              );
-            },
-          );
+                    );
+                  },
+                );
         },
       ),
     );
@@ -232,46 +239,17 @@ class _Explore extends State<Explore> {
                     ),
                     Container(
                         height: 190.0,
-                        child: ListView(
+                        child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          children: [
-                            Container(
-                              child: CustomizedGridTile(
-                                onPress:  DetailsScreen(bookName: bookUploadedList[0]["BookName"],type: "Buy",imageUrl: bookUploadedList[0]["FrontView"],),
-                                image: bookUploadedList[0]["FrontView"],
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: bookUploadedList[1]["FrontView"],
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                          ],
+                          itemCount: bookUploadedList.length,
+                          itemBuilder: (context, int index) {
+                            return customCard(
+                                bookName: bookUploadedList[index]["BookName"],
+                                bookImage: bookUploadedList[index]["FrontView"],
+                                type: "Buy");
+                          },
+                          separatorBuilder: (BuildContext context, int index) =>
+                              const Divider(),
                         )),
                   ],
                 ),
@@ -294,47 +272,17 @@ class _Explore extends State<Explore> {
                     ),
                     Container(
                         height: 190.0,
-                        child: ListView(
+                        child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          children: [
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                          ],
+                          itemCount: bookUploadedList.length,
+                          itemBuilder: (context, int index) {
+                            return customCard(
+                                bookName: bookUploadedList[index]["BookName"],
+                                bookImage: bookUploadedList[index]["FrontView"],
+                                type: "Buy");
+                          },
+                          separatorBuilder: (BuildContext context, int index) =>
+                              const Divider(),
                         )),
                   ],
                 ),
@@ -357,47 +305,17 @@ class _Explore extends State<Explore> {
                     ),
                     Container(
                         height: 190.0,
-                        child: ListView(
+                        child: ListView.separated(
                           scrollDirection: Axis.horizontal,
-                          children: [
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                // onPress: null,
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                            Container(
-                              child: CustomizedGridTile(
-                                image: "",
-                              ),
-                            ),
-                          ],
+                          itemCount: bookUploadedList.length,
+                          itemBuilder: (context, int index) {
+                            return customCard(
+                                bookName: bookUploadedList[index]["BookName"],
+                                bookImage: bookUploadedList[index]["FrontView"],
+                                type: "Buy");
+                          },
+                          separatorBuilder: (BuildContext context, int index) =>
+                              const Divider(),
                         )),
                   ],
                 ),
@@ -405,6 +323,24 @@ class _Explore extends State<Explore> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  customCard({
+    String bookName,
+    String type,
+    String bookImage,
+  }) {
+    return Container(
+      child: CustomizedGridTile(
+        onPress: DetailsScreen(
+          bookName: bookName,
+          type: type,
+          imageUrl: bookImage,
+        ),
+        image: bookImage,
+        bookName: bookName,
       ),
     );
   }
