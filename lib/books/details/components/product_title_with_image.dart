@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../all_book.dart';
-
 import '../../constants.dart';
 
 class ProductTitleWithImage extends StatelessWidget {
@@ -21,10 +20,6 @@ class ProductTitleWithImage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-            "Book You Can $type",
-            style: TextStyle(color: Colors.white),
-          ),
           Text(
             "$bookName",
             style: Theme.of(context)
