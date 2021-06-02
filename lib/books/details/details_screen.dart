@@ -17,34 +17,6 @@ class DetailsScreen extends StatefulWidget {
   final bookPostedBy;
   final typeOfBook;
 
-  const DetailsScreen({Key key, this.product, this.bookName, this.type, this.imageUrl, this.authorName, this.reDirect, this.bookPostedBy, this.typeOfBook}) : super(key: key);
-
-  @override
-  _DetailsScreenState createState() => _DetailsScreenState();
-}
-
-class _DetailsScreenState extends State<DetailsScreen> {
-  @override
-  void initState() {
-    getData();
-    // TODO: implement initState
-    super.initState();
-  }
-  void getData(){
-    FirebaseFirestore.instance
-        .collection('UserDetails')
-        .doc(widget.bookPostedBy)
-        .get()
-        .then((DocumentSnapshot documentSnapshot) {
-      if (documentSnapshot.exists) {
-        lenderDetails = documentSnapshot.data();
-        lenderEmail=lenderDetails["E-Mail"];
-        lenderName=lenderDetails["UserName"];
-        lenderPhoneNo=lenderDetails["PhoneNo."];
-      }
-      print(lenderEmail);
-    });
-  }
   const DetailsScreen(
       {Key key,
       this.product,
@@ -62,9 +34,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
       // each product have a color
       backgroundColor: Colors.grey,
       appBar: buildAppBar(context),
-<<<<<<< Updated upstream
-      body: Body(product: widget.product,bookName: widget.bookName,type: widget.type,imageUrl: widget.imageUrl,authorName: widget.authorName,reDirect: widget.reDirect,typeOfBook: widget.typeOfBook,bookPostedBy: widget.bookPostedBy,),
-=======
       body: Body(
         product: product,
         bookName: bookName,
@@ -75,7 +44,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
         typeOfBook: typeOfBook,
         bookPostedBy: bookPostedBy,
       ),
->>>>>>> Stashed changes
     );
   }
 
@@ -103,5 +71,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
         SizedBox(width: kDefaultPaddin / 2)
       ],
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }

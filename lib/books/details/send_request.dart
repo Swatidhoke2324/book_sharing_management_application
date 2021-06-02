@@ -101,14 +101,6 @@ class _SendRequestState extends State<SendRequest> {
               }));
             },
           ),
-          SizedBox(height: 30,),
-          Text("Request sent successfully to the Book Owner",textAlign:TextAlign.center,style: TextStyle(fontSize: 25),),
-          SizedBox(height: 30,),
-          Text("Contact ${widget.lenderName}",textAlign:TextAlign.center,style: TextStyle(fontSize: 25),),
-          SizedBox(height: 10,),
-          Text("PhoneNo: ${widget.lenderPhoneNo}",textAlign:TextAlign.center,style: TextStyle(fontSize: 20),),
-          SizedBox(height: 10,),
-          Text("Email: ${widget.lenderEmail}",textAlign:TextAlign.center,style: TextStyle(fontSize: 20),)
         ],
       ),
     );
