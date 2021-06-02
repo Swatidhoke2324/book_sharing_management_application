@@ -28,12 +28,27 @@ class _ContactUs extends State<ContactUs> {
         ),
         backgroundColor: Color(0xFFECF0F3),
         body: Center(
-          child:Text('Team Pragmizers',
-          style: TextStyle(
-            fontSize: 30,
-            color: Color(0xFF193566),
+          child: Container(
+            child: Column(
+              children: [
+                Text('Team Pragmizers',
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 30,
+                  color: Color(0xFF193566),
+                ),
+                ),
+                SizedBox(height:20),
+                Text('Email: teampragmizers@gmail.com',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                    color: Color(0xFF193566),
+                  ),
+                ),
+              ],
+            ),
           ),
-          )
         ),
       ),
     );
