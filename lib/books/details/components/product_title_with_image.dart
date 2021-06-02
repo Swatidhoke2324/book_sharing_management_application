@@ -48,7 +48,7 @@ class ProductTitleWithImage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(width: kDefaultPaddin + 80),
+              SizedBox(width: kDefaultPaddin + 50),
               Container(
                 height: 200,
                 child: Expanded(

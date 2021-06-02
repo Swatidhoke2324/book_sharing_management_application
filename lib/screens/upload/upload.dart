@@ -1,6 +1,7 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -25,25 +26,14 @@ class _Upload extends State<Upload> {
         .then((DocumentSnapshot documentSnapshot) {
       setState(() {
         if (documentSnapshot.exists) {
-          fetchData=documentSnapshot.data();
-          uploadedBookNo=fetchData["uploadedBookNo"];
+          fetchData = documentSnapshot.data();
+          uploadedBookNo = fetchData["uploadedBookNo"];
           print("BookNo: $uploadedBookNo");
         }
       });
     });
-    _firestore
-        .collection('BookUploadedDetails')
-        .doc(loggedInEmail)
-        .get()
-        .then((DocumentSnapshot documentSnapshot) {
-      setState(() {
-        if (documentSnapshot.exists) {
-          bookUploadedDetails = documentSnapshot.data();
-          bookUploadedList=bookUploadedDetails["Books"];
-        }
-      });
-    });
   }
+
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final _firestore = FirebaseFirestore.instance;
   bool showSpinner = false;
@@ -51,6 +41,7 @@ class _Upload extends State<Upload> {
   String bookAuthor;
   String bookEdition;
   String bookISBN;
+
   Future uploadFile(File img) async {
     Reference ref = FirebaseStorage.instance
         .ref()
@@ -107,7 +98,6 @@ class _Upload extends State<Upload> {
                             children: <Widget>[
                               SizedBox(height: height * 0.04),
                               Image.asset("assets/images/login.png"),
-                              IconButton(icon: Icon(Icons.refresh), onPressed: (){getData();}),
                               CustomizedTextFormField(
                                 hintText: "Book Name",
                                 hideText: false,
@@ -172,7 +162,7 @@ class _Upload extends State<Upload> {
                                         MaterialPageRoute(
                                           builder: (context) {
                                             return BookDetails(
-                                              uploadedBookNo:uploadedBookNo,
+                                              uploadedBookNo: uploadedBookNo,
                                               bookName: bookName,
                                               bookAuthor: bookAuthor,
                                               bookEdition: bookEdition,

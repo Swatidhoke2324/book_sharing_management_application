@@ -1,11 +1,14 @@
 import 'package:book_sharing_management_application/constants.dart';
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:book_sharing_management_application/screens/explore/explore.dart';
 import 'package:book_sharing_management_application/screens/forgot_password/forgot_password.dart';
 import 'package:book_sharing_management_application/screens/home_screen/home_screen.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
 import 'package:book_sharing_management_application/screens/sign_up_screen.dart/signup_screen.dart';
 import 'package:book_sharing_management_application/size_config.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +21,29 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getData2();
+  }
+  void getData2(){
+    FirebaseFirestore.instance
+        .collection('UserIds')
+        .doc("email")
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          userIdData = documentSnapshot.data();
+          setState(() {
+            idList = userIdData["ids"];
+          });
+          print("BookNo: $idList");
+        }
+      });
+    });
+  }
   void getData() {
     FirebaseFirestore.instance
         .collection('BookUploadedDetails')
@@ -27,13 +53,35 @@ class _BodyState extends State<Body> {
       setState(() {
         if (documentSnapshot.exists) {
           bookUploadedDetails = documentSnapshot.data();
-          bookUploadedList=bookUploadedDetails["Books"];
-          print("Book Data $bookUploadedDetails");
+          bookUploadedList = bookUploadedDetails["Books"];
+         type= bookUploadedList[0]['ForSell'];
+
+
+          for (int i = 0; i <= bookUploadedList.length; ++i) {
+            if (bookUploadedList[i]['ForSell'] == true) {
+              setState(() {
+                bookUploadedListBuy.add(bookUploadedList[i]);
+              });
+            }
+            if (bookUploadedDetails["Books"][i]['ForLending'] == true) {
+              setState(() {
+                bookUploadedListBorrow.add(bookUploadedList[i]) ;
+              });
+            }
+            if (bookUploadedDetails["Books"][i]['ForDonation'] == true) {
+              setState(() {
+                bookUploadedListDonate.add(bookUploadedList[i]);
+              });
+            }
+          }
+          print("Book Data $type $bookUploadedListBuy");
+          print("Book Data $type $bookUploadedListBorrow");
+
         }
       });
     });
   }
-
+bool type;
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
@@ -49,6 +97,7 @@ class _BodyState extends State<Body> {
       "image": "assets/images/signup.png"
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -90,7 +139,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        getData();
+                        getBooksData();
                         Navigator.push(
                           context,
                           MaterialPageRoute(
