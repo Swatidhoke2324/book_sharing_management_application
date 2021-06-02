@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:book_sharing_management_application/screens/explore/explore.dart';
 import 'package:book_sharing_management_application/screens/explore/searchstate.dart';
 import 'package:book_sharing_management_application/screens/more/more.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    getBooksData();
     print('${widget.email}, Hi');
     getData();
   }

@@ -135,7 +135,6 @@ bool type;
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        getBooksData();
                         Navigator.push(
                           context,
                           MaterialPageRoute(

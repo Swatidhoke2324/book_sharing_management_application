@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../all_book.dart';
@@ -7,11 +8,12 @@ import '../../constants.dart';
 class AddToCart extends StatelessWidget {
   const AddToCart({
     Key key,
-    @required this.product, this.type,
+    @required this.product, this.type, this.redirect,
   }) : super(key: key);
 
   final Product product;
   final type;
+  final redirect;
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +28,13 @@ class AddToCart extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18),
               border: Border.all(
-                color: Colors.grey,
+                color: kPrimaryColor,
               ),
             ),
             child: IconButton(
               icon: SvgPicture.asset(
                 "assets/icons/add_to_cart.svg",
-                color: Colors.grey,
+                color: kPrimaryColor,
               ),
               onPressed: () {},
             ),
@@ -43,8 +45,10 @@ class AddToCart extends StatelessWidget {
               child: FlatButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
-                color: Colors.grey,
-                onPressed: () {},
+                color: kPrimaryColor,
+                onPressed: () {
+                  redirect;
+                },
                 child: Text(
                   type,
                   style: TextStyle(

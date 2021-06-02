@@ -1,3 +1,4 @@
+import 'package:book_sharing_management_application/constants.dart';
 import 'package:flutter/material.dart';
 import '../../all_book.dart';
 
@@ -36,7 +37,7 @@ class ColorAndSize extends StatelessWidget {
         Expanded(
           child: RichText(
             text: TextSpan(
-              style: TextStyle(color: kTextColor),
+              style: TextStyle(color: kPrimaryColor),
               children: [
                 TextSpan(
                   text: "Size\n",

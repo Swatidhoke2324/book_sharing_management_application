@@ -1,6 +1,7 @@
 import 'package:book_sharing_management_application/books/details/details_screen.dart';
 import 'package:book_sharing_management_application/components/customized_grid_tile.dart';
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -238,7 +239,7 @@ class _Explore extends State<Explore> {
                       ),
                     ),
                     Container(
-                        height: 190.0,
+                        height: 230.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
                           itemCount: bookUploadedListBuy.length,
@@ -248,7 +249,7 @@ class _Explore extends State<Explore> {
                               bookImage: bookUploadedListBuy[index]
                                   ["FrontView"],
                               type: "Buy",
-                              authorName: bookUploadedListDonate[index]
+                              authorName: bookUploadedListBuy[index]
                                   ["BookAuthor"],
                             );
                           },
@@ -275,7 +276,7 @@ class _Explore extends State<Explore> {
                       ),
                     ),
                     Container(
-                        height: 190.0,
+                        height: 230.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
                           itemCount: bookUploadedListBorrow.length,
@@ -286,7 +287,7 @@ class _Explore extends State<Explore> {
                               bookImage: bookUploadedListBorrow[index]
                                   ["FrontView"],
                               type: "Borrow",
-                              authorName: bookUploadedListDonate[index]
+                              authorName: bookUploadedListBorrow[index]
                                   ["BookAuthor"],
                             );
                           },
@@ -313,7 +314,7 @@ class _Explore extends State<Explore> {
                       ),
                     ),
                     Container(
-                        height: 190.0,
+                        height: 230.0,
                         child: ListView.separated(
                           scrollDirection: Axis.horizontal,
                           itemCount: bookUploadedListDonate.length,

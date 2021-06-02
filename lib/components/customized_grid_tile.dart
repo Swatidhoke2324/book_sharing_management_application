@@ -36,7 +36,7 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
             ),
             child: Container(
               padding: EdgeInsets.all(0.0),
-              height: 170.0,
+              height: 200.0,
               width: 120.0,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
@@ -54,7 +54,7 @@ class _CustomizedGridTileState extends State<CustomizedGridTile> {
                     child: Column(children: [
                       Container(child: Image.network(widget.image) , height: 100,),
                       SizedBox(height: 05,),
-                      Text(widget.bookName,textAlign: TextAlign.center,),
+                      Text(widget.bookName,textAlign: TextAlign.center,style: TextStyle(fontSize: 12),),
                     ],),
                   ),
                 ),
