@@ -1,5 +1,6 @@
 
 import 'package:book_sharing_management_application/data.dart';
+import 'package:book_sharing_management_application/screens/more/my_books.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:book_sharing_management_application/screens/login_screen/login_screen_body.dart';
@@ -99,7 +100,16 @@ class _More extends State<More> {
                       Container(
                         child:GestureDetector(
                           behavior: HitTestBehavior.translucent,
-                          onTap: () {print('tapped');},
+                          onTap: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return MyBooks();
+                                },
+                              ),
+                            );
+                          },
                           child: ListTile(
                             leading:Icon(
                               Icons.book_online_sharp,
