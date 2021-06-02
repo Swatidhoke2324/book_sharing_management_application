@@ -7,10 +7,11 @@ import '../../constants.dart';
 class AddToCart extends StatelessWidget {
   const AddToCart({
     Key key,
-    @required this.product,
+    @required this.product, this.type,
   }) : super(key: key);
 
   final Product product;
+  final type;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class AddToCart extends StatelessWidget {
                 color: Colors.grey,
                 onPressed: () {},
                 child: Text(
-                  "Buy  Now".toUpperCase(),
+                  type,
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,

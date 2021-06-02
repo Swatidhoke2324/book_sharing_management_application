@@ -1,15 +1,12 @@
 import 'package:book_sharing_management_application/components/customized_button.dart';
 import 'package:book_sharing_management_application/components/customized_text_form_field.dart';
 import 'package:book_sharing_management_application/data.dart';
-import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'book_details.dart';
 
 class Upload extends StatefulWidget {
@@ -18,6 +15,23 @@ class Upload extends StatefulWidget {
 }
 
 class _Upload extends State<Upload> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    FirebaseFirestore.instance
+        .collection('BookUploadedDetails')
+        .doc(loggedInEmail)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      setState(() {
+        if (documentSnapshot.exists) {
+          bookUploadedDetails = documentSnapshot.data();
+          bookUploadedListUser = bookUploadedDetails["Books"];
+        }
+      });
+    });
+    super.initState();
+  }
   void getData() {
     _firestore
         .collection('UserDetails')

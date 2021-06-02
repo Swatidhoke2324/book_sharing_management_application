@@ -9,16 +9,17 @@ class DetailsScreen extends StatelessWidget {
   final bookName;
   final type;
   final imageUrl;
+  final authorName;
 
 
-  const DetailsScreen({Key key, this.product, this.bookName, this.type, this.imageUrl}) : super(key: key);
+  const DetailsScreen({Key key, this.product, this.bookName, this.type, this.imageUrl, this.authorName}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // each product have a color
       backgroundColor: Colors.grey,
       appBar: buildAppBar(context),
-      body: Body(product: product,bookName: bookName,type: type,imageUrl: imageUrl,),
+      body: Body(product: product,bookName: bookName,type: type,imageUrl: imageUrl,authorName: authorName,),
     );
   }
 

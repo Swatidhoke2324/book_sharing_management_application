@@ -244,9 +244,13 @@ class _Explore extends State<Explore> {
                           itemCount: bookUploadedListBuy.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedListBuy[index]["BookName"],
-                                bookImage: bookUploadedListBuy[index]["FrontView"],
-                                type: "Buy");
+                              bookName: bookUploadedListBuy[index]["BookName"],
+                              bookImage: bookUploadedListBuy[index]
+                                  ["FrontView"],
+                              type: "Buy",
+                              authorName: bookUploadedListDonate[index]
+                                  ["BookAuthor"],
+                            );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(),
@@ -277,9 +281,14 @@ class _Explore extends State<Explore> {
                           itemCount: bookUploadedListBorrow.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedListBorrow[index]["BookName"],
-                                bookImage: bookUploadedListBorrow[index]["FrontView"],
-                                type: "Borrow");
+                              bookName: bookUploadedListBorrow[index]
+                                  ["BookName"],
+                              bookImage: bookUploadedListBorrow[index]
+                                  ["FrontView"],
+                              type: "Borrow",
+                              authorName: bookUploadedListDonate[index]
+                                  ["BookAuthor"],
+                            );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(),
@@ -310,9 +319,14 @@ class _Explore extends State<Explore> {
                           itemCount: bookUploadedListDonate.length,
                           itemBuilder: (context, int index) {
                             return customCard(
-                                bookName: bookUploadedListDonate[index]["BookName"],
-                                bookImage: bookUploadedListDonate[index]["FrontView"],
-                                type: "Take it");
+                              bookName: bookUploadedListDonate[index]
+                                  ["BookName"],
+                              bookImage: bookUploadedListDonate[index]
+                                  ["FrontView"],
+                              type: "Take it",
+                              authorName: bookUploadedListDonate[index]
+                                  ["BookAuthor"],
+                            );
                           },
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(),
@@ -331,6 +345,7 @@ class _Explore extends State<Explore> {
     String bookName,
     String type,
     String bookImage,
+    String authorName,
   }) {
     return Container(
       child: CustomizedGridTile(
@@ -338,6 +353,7 @@ class _Explore extends State<Explore> {
           bookName: bookName,
           type: type,
           imageUrl: bookImage,
+          authorName: authorName,
         ),
         image: bookImage,
         bookName: bookName,

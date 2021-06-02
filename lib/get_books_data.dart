@@ -13,7 +13,7 @@ void getBooksData() {
       bookUploadedDetails = documentSnapshot.data();
       bookUploadedList = bookUploadedDetails["Books"];
 
-      for (int i = 0; i <= bookUploadedList.length; ++i) {
+      for (int i = 0; i < bookUploadedList.length; ++i) {
         if (bookUploadedList[i]['ForSell'] == true) {
           bookUploadedListBuy.add(bookUploadedList[i]);
         }
