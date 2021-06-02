@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:book_sharing_management_application/get_books_data.dart';
 import 'package:book_sharing_management_application/screens/explore/explore.dart';
 import 'package:book_sharing_management_application/screens/more/more.dart';
-import 'package:book_sharing_management_application/screens/request/request.dart';
+import 'package:book_sharing_management_application/screens/request/RequestsPageValidate.dart';
 import 'package:book_sharing_management_application/screens/upload/validate.dart';
 import 'package:book_sharing_management_application/screens/wishlist/wishlist.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -74,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     UploadPageValidate(),
-    ValidateRequestPage(),
+    RequestPageValidate(),
     Explore(),
     Wishlist(),
     More(),

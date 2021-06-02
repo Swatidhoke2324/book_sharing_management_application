@@ -182,6 +182,10 @@ class _SignUpScreenBodyState extends State<SignUpScreenBody> {
                                           .collection('BorrowRequests')
                                           .doc(email)
                                           .set({
+                                        "ReceivedRequests":
+                                            [],
+                                        "SentRequests":
+                                        [],
                                       });
                                       Navigator.push(
                                         context,

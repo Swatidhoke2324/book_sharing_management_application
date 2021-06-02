@@ -26,5 +26,5 @@ String lenderEmail;
 String lenderPhoneNo;
 
 Map bookBorrowedDetails;
-List sentRequestList;
-List receivedRequestList;
+List sentRequestList=[];
+List receivedRequestList=[];

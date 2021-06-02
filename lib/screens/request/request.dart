@@ -37,10 +37,10 @@ class _ValidateRequestPageState extends State<ValidateRequestPage> {
 
   @override
   Widget build(BuildContext context) {
-    if (sentRequestList.length== 0||receivedRequestList.length==0) {
-      return Requests();
-    } else {
+    if (sentRequestList.length==0) {
       return NoRequest();
+    } else {
+      return Requests();
     }
   }
 }
