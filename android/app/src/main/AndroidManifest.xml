@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.book_sharing_management_application">
+    package="com.pragmizers.book_sharing_management_application">
    <application
-        android:label="book_sharing_management_application"
+        android:label="SETbookS "
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

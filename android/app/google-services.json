@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "698802081039",
+    "firebase_url": "https://book-sharing-management-app-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "book-sharing-management-app",
     "storage_bucket": "book-sharing-management-app.appspot.com"
   },
@@ -10,6 +11,43 @@
         "mobilesdk_app_id": "1:698802081039:android:b7530524f5bb16827e027a",
         "android_client_info": {
           "package_name": "com.example.book_sharing_management_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698802081039-8s37kbsff2p0g5ekb6b9kagls5l9tpe0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.book_sharing_management_application",
+            "certificate_hash": "df4cc9cca1cf49742d04a05bf1535fe5511774e2"
+          }
+        },
+        {
+          "client_id": "698802081039-6mohi1kdgvs2j1e14mtg7skdjeusahg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp0mzmy77hGXLeJOaA40HRst1z5MGOMBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698802081039-6mohi1kdgvs2j1e14mtg7skdjeusahg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698802081039:android:175146c9ff5759e47e027a",
+        "android_client_info": {
+          "package_name": "com.pragmizers.book_sharing_management_application"
         }
       },
       "oauth_client": [

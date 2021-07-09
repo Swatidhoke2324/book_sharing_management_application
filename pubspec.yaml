@@ -35,7 +35,7 @@ dependencies:
   cupertino_icons:
   carousel_slider:
   flutter_svg:
-  firestore_search: ^0.1.2
+  firestore_search:
   get:
 
 
